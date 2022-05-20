@@ -1,6 +1,20 @@
-# Sximo
+<center>
+<img src="./public/frontend/assets/logo.png" alt="Justicia Logo">
+</center>
 
-## Instruction
+# Justicia
+The mission of **Justicia** Project is to abolish child marriage, promote the rights of women and girls, and work towards women’s economic empowerment. WAP uses advocacy to promote and protect the rights of vulnerable and marginalized women and girls.
+
+## Todo
+- [x] Import All the pages
+- [X] Connection with Database
+- [ ] Fetch and show data from database
+- [ ] Integrate TailwindCSS
+- [ ] Improve Design and Typography
+
+## Installation Instruction
+<details>
+<summary>Click to expand!</summary>
 
 -   Clone the Repository
 
@@ -45,3 +59,4 @@
     dummyemail@email.com
     123@@123
     ```
+</details>
