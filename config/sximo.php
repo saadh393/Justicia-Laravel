@@ -1,8 +1,8 @@
 <?php 
 return [
-'cnf_appname' 			=> 'Justicia',
-'cnf_appdesc' 			=> 'Justicia is a Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum.',
-'cnf_comname' 			=> 'Justicia',
+'cnf_appname' 			=> 'Sximo',
+'cnf_appdesc' 			=> 'Sximo',
+'cnf_comname' 			=> 'Sximo',
 'cnf_email' 			=> 'info@mycompanyname.com',
 'cnf_metakey' 			=> 'my site , my company  , Larvel Crud',
 'cnf_metadesc' 		=> 'Write description for your site',
