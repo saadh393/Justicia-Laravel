@@ -1,18 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\blogsmodel;
 
 class BlogController extends Controller
 {
 	public function index()
 	{
-		$data = [
-			'title' => "International Women's Day 2022: Date, history, significance, theme this year",
-			'date' => 'November 19, 2022',
-			'description' => "International Women's Day 2022: Date, history, significance, theme this year",
-			'image' => "/assets/post-thumb.png",
-			'id' => 1
-		];
-		return view('frontend.blog', ["data" => $data]);
+		$blogPosts = blogsmodel::all();
+
+		return view('frontend.blog', ["blogs" => $blogPosts]);
 	}
 }

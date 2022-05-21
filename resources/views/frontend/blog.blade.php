@@ -6,23 +6,11 @@
         <div class="container">
             <h1 class="section-title text-center my-6">Our Recent works</h1>
             <div class="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
-                <!-- Card 1 -->
-            @include('.frontend.components.blog_card', ["card" => $data])
 
-            <!-- Card 2 -->
-            @include('.frontend.components.blog_card', ["card" => $data])
+                @foreach($blogs as $blog)
+                    @include('.frontend.components.blog_card', ["blog" => $blog])
+                @endforeach
 
-            <!-- Card 3 -->
-            @include('.frontend.components.blog_card', ["card" => $data])
-
-            <!-- Card 4 -->
-            @include('.frontend.components.blog_card', ["card" => $data])
-
-            <!-- Card 5 -->
-            @include('.frontend.components.blog_card', ["card" => $data])
-
-            <!-- Card 6 -->
-                @include('.frontend.components.blog_card', ["card" => $data])
             </div>
 
 

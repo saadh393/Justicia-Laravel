@@ -7,26 +7,15 @@
             <h1 class="section-title text-center my-6">Our Recent works</h1>
 
             <div class="grid justify-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-
-                @include('frontend.components.publication_card', ["card" => $data])
-
-                @include('frontend.components.publication_card', ["card" => $data])
-
-                @include('frontend.components.publication_card', ["card" => $data])
-
-                @include('frontend.components.publication_card', ["card" => $data])
-
-                @include('frontend.components.publication_card', ["card" => $data])
-
-                @include('frontend.components.publication_card', ["card" => $data])
-
-                @include('frontend.components.publication_card', ["card" => $data])
+                @foreach($publications as $publication)
+                    @include('frontend.components.publication_card', ["publication" => $publication])
+                @endforeach
 
             </div>
             <!-- Gird -->
 
             <!-- Pagination  -->
-            <ul class="pagination-Container">
+            <ul class="pagination-Container hidden">
                 <li class="pagination-item">
                     <a class="text-white font-medium" href="#">1</a>
                 </li>

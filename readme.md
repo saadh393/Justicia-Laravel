@@ -1,4 +1,4 @@
-<center>
+<center style="backgroud-color : 'blue'">
 <img src="./public/frontend/assets/logo.png" alt="Justicia Logo">
 </center>
 

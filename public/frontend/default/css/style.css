@@ -64,7 +64,8 @@ h5 , h6 {
 }
 
 img.avatar {
-      border-radius: 50%;
+      /*border-radius: 50%;*/
+  object-fit: cover;
 }
 
 /* Prelaoder */
@@ -1142,8 +1143,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   float: left;
   width: 100px;
 }
- .avatar{ 
-  border-radius: 50%;
+ .avatar{
+  /*border-radius: 50%;*/
+   object-fit: cover;
 }
 #blog .blog-item-comments .content{
   margin-left: 80px; 

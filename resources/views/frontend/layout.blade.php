@@ -47,9 +47,10 @@
         <img class="w-8 h-8 md:w-10 md:h-10" src="{{ asset('frontend/assets/logo.png') }}" alt="Justicia" />
         <ul class="hidden md:flex items-center gap-x-5">
             <a href="/"><li>Home</li></a>
-            <a href="#about"><li>About Us</li></a>
+            <a href="/about"><li>About Us</li></a>
             <a href="#works"><li>Our Works</li></a>
             <a href="/publications"><li>Publications</li></a>
+            <a href="/blog"><li>Blogs</li></a>
             <a href="#join"><li>Join us</li></a>
         </ul>
         <img class="md:hidden w-4 h-4" src="{{ asset('frontend/assets/Menu.svg') }}" alt="Hamburger" srcset="" />

@@ -42,7 +42,8 @@ a.nav-link {
   font-size: 12px;
 }
 .avatar {
-  border-radius: 50% !important;
+  /*border-radius: 50% !important;*/
+  object-fit: cover;
 }
 .navbar-toggler {
   border: none;

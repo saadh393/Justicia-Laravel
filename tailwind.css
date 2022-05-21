@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  input {
+    @apply focus:ring-1 ring-primary outline-none;
+  }
+
+  a {
+    @apply transition-all hover:text-secondary-hover active:text-secondary-active hover:underline hover:underline-offset-2;
+  }
+}
+
+@layer utilities {
+  /* Utilities Classes */
+  * {
+    font-family: "Inter", sans-serif;
+  }
+  .container {
+    @apply w-10/12 xl:w-8/12  mx-auto;
+  }
+
+  .paragraph-normal {
+    @apply leading-6 lg:leading-7 text-sm md:text-base font-light;
+  }
+
+  .section-title {
+    @apply font-extrabold text-2xl text-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-primary hover:bg-secondary-hover focus:ring-secondary active:bg-secondary-active;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-hover focus-within:ring-primary active:bg-primary-active;
+  }
+
+  .btn {
+    @apply cursor-pointer w-max text-xs lg:text-base shadow-lg rounded-full transition px-6 py-2 focus:outline-none focus:ring-4 focus:ring-opacity-60;
+  }
+
+  /* Home Page */
+
+  /* Our Recent Work | Slider Section | Started */
+  .recentwork-card {
+    @apply flex flex-col lg:flex-row;
+  }
+
+  .recentwork-card--img {
+    @apply overflow-hidden lg:w-6/12 object-cover max-h-96 rounded-tl-lg rounded-tr-lg lg:rounded-tr-none lg:rounded-bl-lg;
+  }
+
+  .recentwork-card--content {
+    @apply flex flex-col space-y-2 bg-primary justify-center px-6 py-6 lg:py-8 shadow-lg  rounded-br-lg rounded-bl-lg lg:rounded-tr-lg lg:rounded-bl-none;
+  }
+
+  .recentwork-card--date {
+    @apply text-xs text-white;
+  }
+
+  .recentwork-card--title {
+    @apply text-xl lg:text-3xl font-bold text-secondary;
+  }
+
+  .recentwork-next-prev {
+    @apply absolute top-2/4  z-10 w-12 h-12 bg-[#CE577D] text-center text-white flex justify-center items-center shadow-lg rounded-sm cursor-pointer transition-all 
+    hover:bg-primary-hover hover:shadow-primary active:bg-primary-active transform scale-75 md:scale-100;
+  }
+
+  .recentwork-next {
+    @apply -right-6;
+  }
+
+  .recentwork-prev {
+    @apply -left-6;
+  }
+
+  .owl-carousel .owl-dots {
+    @apply flex justify-center space-x-2;
+  }
+  .owl-carousel button.owl-dot {
+    @apply w-3 h-3 bg-primary-hover rounded-full;
+  }
+
+  .owl-carousel button.active {
+    @apply bg-primary-active;
+  }
+
+  /* Our Recent Work | Slider Section | Ended */
+
+  /* Recent Publication | Slider Section | Started */
+
+  .publication-card {
+    @apply w-60 py-4 flex flex-col space-y-2 mx-auto;
+  }
+
+  .publication-card--img {
+    @apply w-full object-cover;
+  }
+
+  .publication-card--date {
+    @apply text-sm text-primary;
+  }
+
+  .publication-card--title {
+    @apply text-lg font-medium text-gray-800 leading-6;
+  }
+
+  .publication-card--downloadAnchor {
+    @apply underline text-primary my-2 hover:text-primary-hover active:text-primary-active;
+  }
+
+  .publication-card--downloadIcon {
+    @apply underline;
+  }
+  /* Recent Publication | Slider Section | Ended */
+
+  .footer-links {
+    @apply flex space-x-2 text-white font-light;
+  }
+  .footer-links > a {
+    @apply text-xs;
+  }
+
+  /* Working List */
+  .workinglist-card {
+    @apply rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden bg-white;
+  }
+
+  .workinglist-card--img {
+    @apply h-56 lg:h-60 w-full object-cover;
+  }
+
+  .workinglist-card--content {
+    @apply p-4;
+  }
+
+  .workinglist-card--date {
+    @apply text-sm text-primary;
+  }
+
+  .workinglist-card--title {
+    @apply font-semibold text-xl leading-6 text-gray-700 my-2;
+  }
+
+  .workinglist-card--description {
+    @apply paragraph-normal text-gray-600;
+  }
+
+  .workinglist-card--readme {
+    @apply block mt-6 mb-3 hover:text-primary;
+  }
+
+  .pagination-Container {
+    @apply flex space-x-2 justify-center my-10;
+  }
+
+  .pagination-item {
+    @apply w-10 h-10 text-gray-800 grid place-items-center rounded-md border lg:border-2 border-primary;
+  }
+
+  .pagination-item a {
+    @apply text-gray-800;
+  }
+
+  .pagination-Container .active {
+    @apply bg-primary text-white;
+  }
+  .pagination-Container .active a {
+    @apply text-white;
+  }
+}
