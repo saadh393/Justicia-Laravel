@@ -276,10 +276,7 @@
               fill="white"
               fill-opacity="0.20"
             />
-            <path
-              d="M43.955 132.663C43.955 132.663 50.2401 133.421 65.0748 145.496C73.7286 152.242 78.868 161.583 79.3781 171.492C79.3781 171.492 84.4154 142.856 102.832 132.663C108.715 146.718 108.715 162.039 102.832 176.093C114.576 163.33 131.567 154.711 150.479 151.922C150.479 151.922 148.168 176.637 124.414 191.663C100.66 206.69 63.4211 199.596 55.0926 191.663C46.764 183.731 41.2942 173.97 39.322 163.523C37.3498 153.075 38.9567 142.372 43.955 132.663Z"
-              fill="#FF7EAF"
-            />
+           
           </svg>
 
           <svg class="absolute right-0 w-auto h-full bottom-0 -rotate-12" width="250" height="331" viewBox="0 0 250 331" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -361,16 +358,12 @@
 
       <div
         class="grid grid-cols-1 md:grid-cols-2 container"
-        x-data='{posts: [
-        { title: "Legal services for women and sector practitioners in Victoria", color: "bg-purple-800", image: "./assets/Blog/Blog-1.jpg" },
-        { title: "Legal services for women and sector practitioners in Victoria", color: "bg-pink-500", image: "./assets/Blog/Blog-2.jpg" },
-        { title: "Legal services for women and sector practitioners in Victoria", color: "bg-emerald-600", image: "./assets/Blog/Blog-3.jpg" },
-        { title: "Legal services for women and sector practitioners in Victoria", color: "bg-orange-500", image: "./assets/Blog/Blog-4.jpg" },
-      ]}'
       >
 
-          <!-- @include('components.recentworks'); -->
-
+      @foreach($recentWorks as $work)
+        @include('frontend.components.recentworks', ['post' => $work])
+      @endforeach
+          
       </div>
 
       <button class="btn bg-primary-pink !px-28 mx-auto text-white">See Our Other Works</button>

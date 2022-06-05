@@ -1,18 +1,17 @@
 <?php namespace App\Http\Controllers;
 
-use App\Models\Post;
-use App\Library\Markdown;
-use Mail;
 use Illuminate\Http\Request;
-use Illuminate\Pagination\LengthAwarePaginator as Paginator;
-use Validator, Input, Redirect;
+use App\RecentWorks;
+
 
 class HomeController extends Controller
 {
 
 	public function index(Request $request)
 	{
-	return view('frontend.home');
+		$recentWorks = RecentWorks::latest()->get();
+
+		return view('frontend.home', ['recentWorks' => $recentWorks]);
 	}
 }
 
