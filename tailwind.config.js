@@ -1,5 +1,8 @@
 module.exports = {
-  content: ["./index.html", "./"],
+  content: [
+  './resources/**/*.blade.php',
+  './resources/**/*.js',
+  './resources/**/*.vue',],
   theme: {
     extend: {
       colors: {
@@ -10,9 +13,7 @@ module.exports = {
         "secondary-hover": "#FBEEE4",
         "secondary-active": "#F3C8A5",
       },
-      backgroundImage: {
-        "recentwork-overlay": "url('../assets/overlay/recent-work-overlay.png')",
-      },
+
     },
   },
   plugins: [],

@@ -14,11 +14,13 @@ class CreatePublicationsTable extends Migration
     public function up()
     {
         Schema::create('publications', function (Blueprint $table) {
-	        $table->increments('id');
-	        $table->string("Image");
-	        $table->string("Title");
-	        $table->string("DownloadLink");
-	        $table->date("Date");
+            $table->increments('id');
+            $table->string("Image");
+            $table->string("Title");
+            $table->string("Link");
+            $table->date("Date");
+            $table->boolean('slide')->default(0);
+            $table->timestamps();
         });
     }
 
