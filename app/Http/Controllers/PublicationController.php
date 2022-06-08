@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\publicationmodel;
+use App\Publications;
 
 class PublicationController extends Controller
 {
     public function index(){
-	   $publications = publicationmodel::all();
-		return view('frontend.publication', ["publications" => $publications]);
+      
+    $recentPublications = Publications::latest()->get();
+
+		return view('frontend.publication', ["recentPublications" => $recentPublications]);
 
     }
 }

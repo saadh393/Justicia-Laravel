@@ -82,6 +82,7 @@
 
 html {
   line-height: 1.5;
+  scroll-behavior: smooth;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
@@ -93,7 +94,11 @@ html {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
-
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
@@ -244,7 +249,19 @@ textarea {
   padding: 0;
   /* 3 */
 }
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
 
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
 /*
 Remove the inheritance of text transform in Edge and Firefox.
 */
@@ -520,6 +537,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+.
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -602,9 +621,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column-start: 1;
 }
 
-.row-start-1 {
-  grid-row-start: 1;
-}
+
 
 .mx-auto {
   margin-left: auto;
@@ -893,10 +910,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
-.\!px-28 {
-  padding-left: 7rem !important;
-  padding-right: 7rem !important;
-}
+
 
 .py-20 {
   padding-top: 5rem;
@@ -916,8 +930,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
-.text-\[45px\] {
-  font-size: 45px;
+.text-\[35px\] {
+  font-size: 35px;
 }
 
 .text-lg {
@@ -1109,6 +1123,12 @@ a.link {
   right: 150px;
 }
 
+@media (max-width: 768px) {
+  .mission-dots::after, .bg-dots::after{
+    display: none;
+  }
+}
+
 footer {
   background-image: url("../assets/footer.svg");
   background-size: cover;
@@ -1166,6 +1186,28 @@ footer svg {
 }
 
 @media (min-width: 1024px) {
+
+  .lg\py-40 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .lg\text-left {
+    text-align: left;
+  }
+
+  .lg\text-\[45px\] {
+    font-size: 45px;
+  }
+
+  .lg\!px-28 {
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
+  }
+
+  .lg\:row-start-1 {
+    grid-row-start: 1;
+  }
   .lg\:mt-14 {
     margin-top: 3.5rem;
   }
@@ -1187,11 +1229,11 @@ footer svg {
   }
 
   .lg\:min-w-\[378px\] {
-    min-width: 378px;
+    width: 400px;
   }
 
-  .lg\:min-w-\[185px\] {
-    min-width: 185px;
+  .lg\:min-w-\[330px\] {
+    width: 330px;
   }
 
   .lg\:grid-cols-3 {
@@ -1200,6 +1242,10 @@ footer svg {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:flex-row-reverse {
+    flex-direction: row-reverse;
   }
 
   .lg\:p-0 {
@@ -1215,4 +1261,13 @@ footer svg {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+}
+
+/* Custom CSS */
+.mobileNav{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 10;
+  padding: 6px;
 }

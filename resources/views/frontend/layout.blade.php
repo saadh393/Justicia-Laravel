@@ -33,18 +33,22 @@
 <body>
     <!-- Navbar -->
     <nav
-        class="top-8 left-1/2 absolute -translate-x-1/2 z-50 bg-slate-50/20 px-14 py-4 block mx-auto backdrop-blur-xl rounded-full">
-        <ul class="flex gap-8">
+        class="hidden w-fit top-8 left-1/2 absolute -translate-x-1/2 z-50 bg-slate-50/20 px-14 py-4 lg:block mx-auto backdrop-blur-xl rounded-full">
+        <ul class="flex gap-8 w-full">
             <li class="text-white hover:text-slate-100">
-                <a href="#">About Us</a>
+                <a href="/">Home</a>
             </li>
 
             <li class="text-white hover:text-slate-100">
-                <a href="/works.html">Our Works</a>
+                <a href="/#about">About Us</a>
             </li>
 
             <li class="text-white hover:text-slate-100">
-                <a href="/publications.html">Publications</a>
+                <a href="/blog">Our Works</a>
+            </li>
+
+            <li class="text-white hover:text-slate-100">
+                <a href="/publications">Publications</a>
             </li>
 
             <li class="text-white hover:text-slate-100">
@@ -52,6 +56,11 @@
             </li>
         </ul>
     </nav>
+
+    <div class="mobileNav">
+        @include('frontend.svg.hamburger')
+    </div>
+
     @yield('content')
     <footer class="lg:h-[600px] grid place-items-center relative">
         <img class="hidden lg:block absolute left-0 bottom-0" src="./frontend/assets/footer-left.svg" alt="" />

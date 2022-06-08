@@ -1,42 +1,32 @@
 @extends('frontend.layout')
 
 @section('content')
-    <!-- Our Recent works -->
+    <!-- Hero Section -->
     <section>
-        <div class="container">
-            <h1 class="section-title text-center my-6">Our Recent works</h1>
+        <!-- Pink Container -->
+        <div class="primary-gradient-pink h-[450px] py-40 relative hero-section">
+            <!-- Left Side Overlay -->
+            @include('frontend.svg.heroLeftSvg')
 
-            <div class="grid justify-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                @foreach($publications as $publication)
-                    @include('frontend.components.publication_card', ["publication" => $publication])
-                @endforeach
+            <!-- Right Side Overlay -->
+            @include('frontend.svg.heroRightSvg')
 
+            <!-- Content Container -->
+            <div class="px-4 md:px-0 max-w-4xl mx-auto space-y-6 relative">
+                <h1 class="text-slate-50 text-center text-[45px] leading-[60px] font-[600]">Our Publications</h1>
+                <p class="text-lg tracking-wide text-white text-center">Our telephone advice lines provide vital free and
+                    confidential legal advice to women.</p>
             </div>
-            <!-- Gird -->
-
-            <!-- Pagination  -->
-            <ul class="pagination-Container hidden">
-                <li class="pagination-item">
-                    <a class="text-white font-medium" href="#">1</a>
-                </li>
-
-                <li class="pagination-item">
-                    <a class="text-white font-medium" href="#">2</a>
-                </li>
-
-                <li class="pagination-item active">
-                    <a class="text-white font-medium" href="#">3</a>
-                </li>
-
-                <li class="pagination-item">
-                    <a class="text-white font-medium" href="#">4</a>
-                </li>
-            </ul>
         </div>
-        <!-- Container -->
     </section>
 
-    @include('frontend.components.joinus')
+    <section class="py-16 space-y-20">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 container">
+            @foreach ($recentPublications as $publication)
+                @include('frontend.components.publication_Card_2', ['publication' => $publication])
+            @endforeach
+        </div>
+
+        <!-- <button class="btn bg-primary-pink !px-14 mx-auto text-white">See Our Other Works</button> -->
+    </section>
 @endsection
-
-

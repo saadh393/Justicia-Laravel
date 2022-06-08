@@ -1,14 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\blogsmodel;
+use App\RecentWorks;
 
 class BlogController extends Controller
 {
 	public function index()
 	{
-		$blogPosts = blogsmodel::all();
+		$recentWorks = RecentWorks::latest()->get();
 
-		return view('frontend.blog', ["blogs" => $blogPosts]);
+		// Colors for Publication
+		$colorsPublication = ['bg-purple-800','bg-pink-500','bg-emerald-600','bg-orange-500'];
+
+		return view('frontend.blog', ["recentWorks" => $recentWorks, 'colorsPublication' => $colorsPublication]);
 	}
 }
