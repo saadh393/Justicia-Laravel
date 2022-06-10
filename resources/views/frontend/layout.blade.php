@@ -27,6 +27,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('frontend/styles/style.css') }}" />
 </head>
 
@@ -55,19 +57,50 @@
                 <a href="#">Contact Us</a>
             </li>
         </ul>
+
+        <div class="block lg:hidden absolute right-6 top-6 z-20" id="hamburger">
+            @include('frontend.svg.hamburger')
+        </div>
+
+        <div class="hidden w-screen h-screen z-20 bg-slate-50 overflow-hidden grid place-items-center absolute left-0 top-0 opacity-0 transition-all"
+            id="mobileNav">
+            <div class="block lg:hidden absolute right-6 top-6 z-20 cursor-pointer" id="close">
+                @include('frontend.svg.close')
+            </div>
+            <ul class="w-full text-center space-y-5">
+                <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut()">
+                    <a href="/">Home</a>
+                </li>
+
+                <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut()">
+                    <a href="/#about">About Us</a>
+                </li>
+
+                <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut()">
+                    <a href="/blog">Our Works</a>
+                </li>
+
+                <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut()">
+                    <a href="/publications">Publications</a>
+                </li>
+
+                <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut()">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="mobileNav">
-        @include('frontend.svg.hamburger')
-    </div>
+    @include('frontend.components.joinus')
 
     @yield('content')
     <footer class="lg:h-[600px] grid place-items-center relative">
         <img class="hidden lg:block absolute left-0 bottom-0" src="./frontend/assets/footer-left.svg" alt="" />
         <img class="hidden lg:block absolute right-0 bottom-0" src="./frontend/assets/footer-right.svg" alt="" />
-        <div class="container text-center py-20 pt-32 lg:p-0 lg:mt-32">
+        <div class="wrapper text-center py-20 pt-32 lg:p-0 lg:mt-32">
             <h1 class="text-4xl text-white">Interested in Working with us?</h1>
-            <a class="btn bg-[#FF438A] !inline-block my-10 text-slate-50 !px-14 !rounded-full" href="#">Join us as
+            <a class="btn bg-[#FF438A] !inline-block my-10 text-slate-50 !px-14 !rounded-full" href="#"
+                id='joinusBtn'>Join us as
                 Volunteer</a>
             <div class="flex gap-5 justify-center">
                 <a href="#">
@@ -109,5 +142,36 @@
 
 
 </body>
+
+<script>
+    const hamburger = document.querySelector('#hamburger');
+    const mobileNav = document.querySelector('#mobileNav');
+    const joinusBtn = document.querySelector('#joinusBtn');
+    const joinusDialog = document.querySelector('#joinus');
+
+    hamburger.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+        setTimeout(() => {
+            mobileNav.classList.toggle('opacity-100');
+        }, 150);
+        document.querySelector('body').classList.toggle('overflow-hidden');
+    });
+
+    document.querySelector('#close').addEventListener('click', () => {
+        mobileNavFadeOut();
+    });
+
+    function mobileNavFadeOut() {
+        mobileNav.classList.toggle('opacity-0');
+        document.querySelector('body').classList.toggle('overflow-hidden');
+        setTimeout(() => {
+            mobileNav.classList.toggle('hidden');
+        }, 150);
+    }
+
+    joinusBtn.addEventListener('click', function() {
+        joinusDialog.classList.toggle('hidden');
+    })
+</script>
 
 </html>

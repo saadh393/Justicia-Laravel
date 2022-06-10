@@ -3,8 +3,8 @@
 @section('content')
     <!-- Hero Section -->
     <section>
-        <!-- Pink Container -->
-        <div class="primary-gradient-pink h-[650px] py-28 lg:py-40 relative hero-section">
+        <!-- Pink wrapper -->
+        <div class="primary-gradient-pink h-[650px] py-20 lg:py-40 relative hero-section">
             <!-- Left Side Overlay -->
             @include('frontend.svg.heroLeftSvg')
 
@@ -12,7 +12,7 @@
             @include('frontend.svg.heroRightSvg')
 
 
-            <!-- Content Container -->
+            <!-- Content wrapper -->
             <div class="px-4 md:px-0 max-w-4xl mx-auto space-y-6 relative">
                 <h1 class="text-slate-50 text-center text-[35px] lg:text-[45px] leading-[60px] font-[600]">Justicia provide
                     legal
@@ -55,7 +55,7 @@
 
     <!-- who we are  -->
     <section class="py-28" id="about">
-        <div class="container space-y-6">
+        <div class="wrapper space-y-6">
             <h1 class="font-bold text-3xl text-primary-pink text-center">Who We Are</h1>
             <p class="paragraph text-center">
                 Justicia is many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
@@ -68,7 +68,7 @@
 
     <!-- Vision Mission -->
     <section>
-        <div class="container space-y-20">
+        <div class="wrapper space-y-20">
             <!-- Vission -->
             <div class="grid md:grid-cols-2 items-center relative">
                 <div class="bg-dots">
@@ -107,8 +107,8 @@
     </section>
 
     <!-- Our Recent Works -->
-    <section class="py-16 space-y-20">
-        <div class="container space-y-6">
+    <section class="py-16 space-y-10 lg:space-y-20">
+        <div class="wrapper space-y-6">
             <h1 class="font-bold text-3xl text-primary-pink text-center">Our Recent Works</h1>
             <p class="paragraph text-center">
                 We do many things variations of passages of Lorem Ipsum available, but the majority have suffered alteration
@@ -116,7 +116,7 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 container">
+        <div class="grid grid-cols-1 md:grid-cols-2 wrapper">
             @foreach ($recentWorks as $work)
                 @include('frontend.components.recentworks', [
                     'post' => $work,
@@ -126,14 +126,13 @@
             @endforeach
         </div>
 
-        <a href="/works" style="display: table" class="btn inline-block bg-primary-pink lg:!px-28 mx-auto text-white">See
-            Our
-            Other Works</a>
+        <a href="/works" style="display: table" class="btn bg-primary-pink !px-28 !mt-10 mx-auto text-white">See
+            Our Other Works</a>
     </section>
 
     <!-- Our Publications -->
     <section class="py-16 space-y-20">
-        <div class="container space-y-6" x-data="{ publications: [1, 2, 3, 4] }">
+        <div class="wrapper space-y-6" x-data="{ publications: [1, 2, 3, 4] }">
             <div class="space-y-6">
                 <h1 class="font-bold text-3xl text-primary-pink text-center">Our Publications</h1>
                 <p class="paragraph text-center">
@@ -141,7 +140,7 @@
                     alteration in some form, by injected humour, or randomised words
                 </p>
             </div>
-            <div class="container">
+            <div class="wrapper">
                 @foreach ($recentPublications as $publication)
                     @include('frontend.components.publication_card', ['publication' => $publication])
                 @endforeach

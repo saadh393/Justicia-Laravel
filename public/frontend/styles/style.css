@@ -533,38 +533,38 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.container {
+.wrapper {
   width: 100%;
 }
 
 .
 
 @media (min-width: 640px) {
-  .container {
+  .wrapper {
     max-width: 640px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .wrapper {
     max-width: 768px;
   }
 }
 
 @media (min-width: 1024px) {
-  .container {
+  .wrapper {
     max-width: 1024px;
   }
 }
 
 @media (min-width: 1280px) {
-  .container {
+  .wrapper {
     max-width: 1280px;
   }
 }
 
 @media (min-width: 1536px) {
-  .container {
+  .wrapper {
     max-width: 1536px;
   }
 }
@@ -885,20 +885,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1rem;
 }
 
-.py-40 {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
+
 
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.py-28 {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
 
 .py-16 {
   padding-top: 4rem;
@@ -1047,7 +1040,7 @@ a.link {
   font-family: "Playfair Display", sans-serif;
 }
 
-.container {
+.wrapper {
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
@@ -1055,13 +1048,13 @@ a.link {
 }
 
 @media (min-width: 768px) {
-  .container {
+  .wrapper {
     max-width: 64rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .container {
+  .wrapper {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -1186,11 +1179,11 @@ footer svg {
 }
 
 @media (min-width: 1024px) {
-
   .lg\py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
   }
+
 
   .lg\text-left {
     text-align: left;
