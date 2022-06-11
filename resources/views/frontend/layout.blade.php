@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Justicia | Home</title>
-    <meta property="og:title" content="Justicia | Home" />
-    <meta property="og:og:description"
-        content="Meta elements are tags used in HTML and XHTML documents to provide structured metadata about a Web page." />
+    <meta property="og:title" content="Justicia Feminist Network" />
+    <meta property="og:og:description" content="Justicia Feminist Network, established in 2016, is the first legal feminist network in Bangladesh
+        led by young women lawyers who are advocating for gender justice and strengthening the
+        capacity of feminist lawyers, youths and justice sector actors" />
     <meta property="og:image" content="https://via.placeholder.com/1080x720.webp/933DB5/FBEEE4?text=Justicia" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1080" />
     <meta property="og:image:height" content="720" />
-    <meta property="og:image:alt"
-        content="Justicia | Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas" />
+    <meta property="og:image:alt" content="Justicia | Justicia Feminist Network, established in 2016" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap"
@@ -53,8 +53,8 @@
                 <a href="/publications">Publications</a>
             </li>
 
-            <li class="text-white hover:text-slate-100">
-                <a href="#">Contact Us</a>
+            <li class="text-white hover:text-slate-100 cursor-pointer">
+                <a onclick="joinUsFadeIn()">Contact Us</a>
             </li>
         </ul>
 
@@ -84,7 +84,7 @@
                     <a href="/publications">Publications</a>
                 </li>
 
-                <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut()">
+                <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut(joinUsFadeIn)">
                     <a href="#">Contact Us</a>
                 </li>
             </ul>
@@ -99,11 +99,11 @@
         <img class="hidden lg:block absolute right-0 bottom-0" src="./frontend/assets/footer-right.svg" alt="" />
         <div class="wrapper text-center py-20 pt-32 lg:p-0 lg:mt-32">
             <h1 class="text-4xl text-white">Interested in Working with us?</h1>
-            <a class="btn bg-[#FF438A] !inline-block my-10 text-slate-50 !px-14 !rounded-full" href="#"
+            <a class="cursor-pointer btn bg-[#FF438A] !inline-block my-10 text-slate-50 !px-14 !rounded-full"
                 id='joinusBtn'>Join us as
                 Volunteer</a>
             <div class="flex gap-5 justify-center">
-                <a href="#">
+                <a target="_blank" href="https://www.facebook.com/justicia985">
                     <svg width="29" height="27" viewBox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M25.6121 0H3.40308C1.87621 0 0.626953 1.19711 0.626953 2.66025V23.9423C0.626953 25.4054 1.87621 26.6025 3.40308 26.6025H25.6121C27.1389 26.6025 28.3882 25.4054 28.3882 23.9423V2.66025C28.3882 1.19711 27.1389 0 25.6121 0ZM21.4479 6.65064H19.5046C17.9777 6.65064 17.9777 7.84775 17.9777 8.77884V11.5721H21.3091L20.8927 14.8974H17.9777V23.1442H14.5076V14.8974H11.0374V11.7051H14.5076V8.51281C14.5076 5.58653 16.1732 3.99038 18.9494 3.99038C20.1986 3.85737 21.4479 3.99038 21.4479 3.99038V6.65064Z"
@@ -148,6 +148,7 @@
     const mobileNav = document.querySelector('#mobileNav');
     const joinusBtn = document.querySelector('#joinusBtn');
     const joinusDialog = document.querySelector('#joinus');
+    const joinus_close = document.querySelector('#joinus_close');
 
     hamburger.addEventListener('click', () => {
         mobileNav.classList.toggle('hidden');
@@ -161,17 +162,36 @@
         mobileNavFadeOut();
     });
 
-    function mobileNavFadeOut() {
+    function mobileNavFadeOut(callback) {
         mobileNav.classList.toggle('opacity-0');
         document.querySelector('body').classList.toggle('overflow-hidden');
         setTimeout(() => {
             mobileNav.classList.toggle('hidden');
+            callback()
         }, 150);
     }
 
-    joinusBtn.addEventListener('click', function() {
+    function joinUsFadeIn() {
         joinusDialog.classList.toggle('hidden');
-    })
+        setTimeout(() => {
+            joinusDialog.classList.toggle('opacity-100');
+            joinusDialog.querySelector('#joinUs_content').classList.toggle('-translate-y-1/2')
+        }, 150);
+        document.querySelector('body').classList.toggle('overflow-hidden');
+    }
+
+    function joinUsFadeOut() {
+        joinusDialog.classList.toggle('opacity-100');
+        joinusDialog.querySelector('#joinUs_content').classList.toggle('-translate-y-1/2')
+        setTimeout(() => {
+            joinusDialog.classList.toggle('hidden');
+            document.querySelector('body').classList.toggle('overflow-hidden');
+        }, 150);
+
+    }
+
+    joinusBtn.addEventListener('click', () => joinUsFadeIn());
+    joinus_close.addEventListener('click', () => joinUsFadeOut());
 </script>
 
 </html>

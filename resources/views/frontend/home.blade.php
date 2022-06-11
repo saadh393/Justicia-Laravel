@@ -78,9 +78,11 @@
                 <div class="space-y-5 text-center lg:text-left">
                     <h3 class="text-2xl font-bold text-text-black">Our Vision</h3>
                     <p class="paragraph">
-                        Justicia is many variations of passages of Lorem Ipsum available, but the majority have suffered
-                        alteration in some form, by injected humour, or randomised words
-                        Justicia is many variations of passages
+                        Justicia Feminist Network envisions a society where gender justice is a reality, where the justice
+                        sector is more gender sensitive, not only towards women but also to persons with all gender
+                        identities, and fosters an enabling environment for all women from the justice sector so that they
+                        are able to use their full potential to thrive and contribute in the legal sector in a more
+                        meaningful way.
                     </p>
                     <a class="block link" href="#">Learn More</a>
                 </div>
@@ -96,9 +98,9 @@
                 <div class="space-y-5 col-start-1 lg:row-start-1 text-center lg:text-left">
                     <h3 class="text-2xl font-bold text-text-black">Our Mision</h3>
                     <p class="paragraph">
-                        Justicia is many variations of passages of Lorem Ipsum available, but the majority have suffered
-                        alteration in some form, by injected humour, or randomised words
-                        Justicia is many variations of passages
+                        Our mission is to support initiatives and movements that are based on feminist principles in order
+                        to challenge the status quo to bring appropriate change and reform in the legal system by
+                        engaging more intergenerational feminist lawyers and justice sector actors
                     </p>
                     <a class="block link" href="#">Learn More</a>
                 </div>

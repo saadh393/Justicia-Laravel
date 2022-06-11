@@ -1,10 +1,10 @@
 <!-- Join as a volunteer -->
-<section id="joinus" class="hidden">
-    <div class="fixed left-0 top-0 bg-black bg-opacity-30 z-50 w-full h-full overflow-hidden"></div>
-
-    <div
-        class="w-[460px] bg-white px-10 py-8 mx-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md z-50">
-        <div class="block absolute right-6 top-6 z-50 cursor-pointer " id="close">
+<section id="joinus" class="opacity-0 z-50 hidden fixed left-0 top-0 right-0 bottom-0 transition-opacity">
+    <div class="fixed left-0 top-0 right-0 bottom-0 bg-black bg-opacity-30 w-full h-full overflow-hidden ">
+    </div>
+    <div id="joinUs_content"
+        class="w-[460px] bg-white px-10 py-8 mx-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-0 transition-transform rounded-md ">
+        <div class="block absolute right-6 top-6  cursor-pointer " id="joinus_close">
             @include('frontend.svg.close')
         </div>
 
@@ -42,7 +42,8 @@
             </label>
 
             <input class="btn mx-auto bg-[#933DB5] text-white w-full mt-10" type="button" value="Reach Me" />
-            <a class="text-center inline-block w-full pt-5 text-sm text-slate-700" href="#">Cancel</a>
+            <a class="text-center inline-block w-full pt-5 text-sm text-slate-700 cursor-pointer"
+                onclick="joinUsFadeOut()">Cancel</a>
         </form>
     </div>
 </section>
