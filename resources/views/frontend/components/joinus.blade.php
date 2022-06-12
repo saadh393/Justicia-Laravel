@@ -9,11 +9,11 @@
         </div>
 
         <h1 class="section-title my-6 text-2xl text-center">Join Us <span class="text-gray-800">as Volunteer</span></h1>
-        <form>
+        <form action="" method="POST" id="joinus_form">
             <!-- Name -->
             <div class="mb-4 pr-1 ">
                 <label class="block text-gray-700 text-base mb-2" for="name">Name</label>
-                <input
+                <input name="name"
                     class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     placeholder="John Doe" type="text" id="name" />
             </div>
@@ -21,7 +21,7 @@
             <!-- Email -->
             <div class="mb-4 pr-1">
                 <label class="block text-gray-700 text-base mb-2" for="Email">Email</label>
-                <input
+                <input name="email"
                     class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     placeholder="example@email.com" type="email" id="Email" />
             </div>
@@ -29,7 +29,7 @@
             <!-- Phone -->
             <div class="mb-4 pr-1 w-full">
                 <label class="block text-gray-700 text-base mb-2" for="Phone">Phone</label>
-                <input
+                <input name="phone"
                     class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     placeholder="0123456789" type="phone" id="Phone" />
             </div>
@@ -41,9 +41,24 @@
                 </span>
             </label>
 
-            <input class="btn mx-auto bg-[#933DB5] text-white w-full mt-10" type="button" value="Reach Me" />
+            <input class="btn mx-auto bg-[#933DB5] text-white w-full mt-10" type="submit" value="Reach Me" />
             <a class="text-center inline-block w-full pt-5 text-sm text-slate-700 cursor-pointer"
                 onclick="joinUsFadeOut()">Cancel</a>
         </form>
     </div>
 </section>
+
+<script>
+$('#joinus_form').submit((e) => {
+    e.preventDefault();
+
+    $.ajax({
+        url : "{{url('/')}}",
+        data : $('#joinus_form').serialize(),
+        type : 'post',
+        success : () => {
+            alert("Submited");
+        }
+    })
+})
+</script>
