@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,7 @@ Route::get('/', function () {
 
 //Default Controller
 Route::get('/', 'HomeController@index');
+Route::post('/', [HomeController::class, 'joinus_form_submission']);
 Route::get('/blog', 'BlogController@index');
 Route::get('/publications', 'PublicationController@index');
 
