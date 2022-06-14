@@ -36,13 +36,9 @@
         rel="stylesheet"/>
 
     <script src="https://cdn.tailwindcss.com"></script>
-<<<<<<< HEAD
     <link rel="stylesheet" href="{{ asset('frontend/styles/style.css') }}"/>
     @yield('styles')
-=======
-    <link rel="stylesheet" href="{{ asset('frontend/styles/style.css') }}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
->>>>>>> 3960fc0666bbdd3c4e987ae29fbb46a932039f9a
 </head>
 
 <body>
