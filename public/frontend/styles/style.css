@@ -1,12 +1,8 @@
 @font-face {
   font-family: "Playfair Display";
-
   src: url("../fonts/PlayfairDisplay-Black.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Black.woff") format("woff");
-
   font-weight: 900;
-
   font-style: normal;
-
   font-display: swap;
 }
 
@@ -261,6 +257,20 @@ textarea {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 /*
 Remove the inheritance of text transform in Edge and Firefox.
@@ -1264,3 +1274,195 @@ footer svg {
   z-index: 10;
   padding: 6px;
 }
+
+/* Our Recent Work | Slider Section | Started */
+
+.recentwork-card {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .recentwork-card {
+    flex-direction: row;
+  }
+}
+
+.recentwork-card--img {
+  min-height: 24rem;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .recentwork-card--img {
+    width: 50%;
+  }
+
+  .recentwork-card--img {
+    border-top-right-radius: 0px;
+  }
+
+  .recentwork-card--img {
+    border-bottom-left-radius: 0.5rem;
+  }
+}
+
+.recentwork-card--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .recentwork-card--content > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+} */
+
+.recentwork-card--content {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 61 181 / var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 1024px) {
+  .recentwork-card--content {
+    border-top-right-radius: 0.5rem;
+  }
+
+  .recentwork-card--content {
+    border-bottom-left-radius: 0px;
+  }
+
+  .recentwork-card--content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.recentwork-card--date {
+  font-size: 1rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.recentwork-card--title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(248 223 203 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .recentwork-card--title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.recentwork-next-prev {
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  --tw-scale-x: .75;
+  --tw-scale-y: .75;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.125rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(206 87 125 / var(--tw-bg-opacity));
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.recentwork-next-prev:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(171 95 201 / var(--tw-bg-opacity));
+  --tw-shadow-color: #933DB5;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.recentwork-next-prev:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(120 49 148 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .recentwork-next-prev {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+}
+
+.recentwork-next {
+  right: -1.5rem;
+}
+
+.recentwork-prev {
+  left: -1.5rem;
+}
+
+.owl-carousel .owl-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.owl-carousel .owl-dots > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.owl-carousel button.owl-dot {
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(171 95 201 / var(--tw-bg-opacity));
+}
+
+.owl-carousel button.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(120 49 148 / var(--tw-bg-opacity));
+}
+
+@media (max-width: 786px) {
+    .recentwork-prev {
+        left: 1.5rem;
+    }
+
+    .recentwork-next-prev{
+        top: 46%;
+    }
+
+}
+
+/* Our Recent Work | Slider Section | Ended */

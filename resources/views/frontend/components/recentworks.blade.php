@@ -1,11 +1,14 @@
-<div>
-    <img class="w-full object-cover" style="height: {{ $height }}" src="/uploads/blog/{{ $work->Image }}"
-        alt="{{ $work->Title }}" />
-    <div class="text-white py-8 space-y-8 px-4 {{ $colorsPublication[$loop->index % 4] }}" style="height: 200px">
-        <h4 class="text-2xl line-clamp-2">{{ $work->Title }}</h4>
+<div class="recentwork-card">
+    <img class="recentwork-card--img" src="/uploads/blog/{{ $work->Image }}" alt="{{ $work->Title }}" />
+    <div class="recentwork-card--content gap-y-3">
+        <h3 class="recentwork-card--date">November 18, 2021</h3>
+        <h1 class="recentwork-card--title line-clamp-2">{{ $work->Title }}</h1>
+        <p class="paragraph-normal text-base text-white line-clamp-5">
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+            alteration in some form, by injected humour, or randomised words which don't look even slightly
+            believable.
+        </p>
         <a href="{{ $work->Link }}" target="_blank"
-            class="btn !inline-block border border-slate-100 hover:bg-slate-100/10 transition-all active:bg-slate-900/10">Learn
-            More
-        </a>
+            class="font-light text-slate-50 my-4 underline underline-offset-4 block">See More</a>
     </div>
 </div>

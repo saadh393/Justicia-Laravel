@@ -4,7 +4,7 @@
     <!-- Hero Section -->
     <section>
         <!-- Pink wrapper -->
-        <div class="primary-gradient-pink h-[650px] py-20 lg:py-40 relative hero-section">
+        <div class="primary-gradient-pink h-[650px] py-20 lg:py-28 relative hero-section">
             <!-- Left Side Overlay -->
             @include('frontend.svg.heroLeftSvg')
 
@@ -13,11 +13,14 @@
 
 
             <!-- Content wrapper -->
-            <div class="px-4 md:px-0 max-w-4xl mx-auto space-y-6 relative">
-                <h1 class="text-slate-50 text-center text-[35px] lg:text-[45px] leading-[60px] font-[600]">Justicia provide
+            <div class="px-4 md:px-0 max-w-4xl mx-auto relative">
+                <div class="w-56 mx-auto">
+                    @include('frontend.svg.logo')
+                </div>
+                <h1 class="text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">Justicia provide
                     legal
                     information for victims of abuse</h1>
-                <p class="text-lg tracking-wide text-white text-center">Our telephone advice lines provide vital free and
+                <p class="text-lg tracking-wide text-white text-center mt-4">Our telephone advice lines provide vital free and
                     confidential legal advice to women.</p>
             </div>
 
@@ -42,19 +45,19 @@
 
             <!-- Ladies Standing -->
             <div
-                class="overflow-x-hidden flex absolute -bottom-[80px] md:-bottom-[50px] items-center w-full justify-center gap-10">
-                <img src="./frontend/assets/Hero/Asset 5Justicia.svg" />
-                <img src="./frontend/assets/Hero/Asset 11Justicia.svg" />
-                <img src="./frontend/assets/Hero/Asset 12Justicia.svg" />
-                <img src="./frontend/assets/Hero/Asset 4Justicia.svg" />
-                <img src="./frontend/assets/Hero/Asset 9Justicia.svg" />
-                <img src="./frontend/assets/Hero/Asset 3Justicia.svg" />
+                class="overflow-x-hidden flex absolute -bottom-[125px] md:-bottom-[95px] items-center w-full justify-center gap-10">
+                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 5Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 11Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 12Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 4Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 9Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 3Justicia.svg" />
             </div>
         </div>
     </section>
 
     <!-- who we are  -->
-    <section class="py-28" id="about">
+    <section class="py-28 mt-10 " id="about">
         <div class="wrapper space-y-6">
             <h1 class="font-bold text-3xl text-primary-pink text-center">Who We Are</h1>
             <p class="paragraph text-center">
@@ -109,7 +112,7 @@
     </section>
 
     <!-- Our Recent Works -->
-    <section class="py-16 space-y-10 lg:space-y-20">
+    <section class="py-16 space-y-10 lg:space-y-20 relative">
         <div class="wrapper space-y-6">
             <h1 class="font-bold text-3xl text-primary-pink text-center">Our Recent Works</h1>
             <p class="paragraph text-center">
@@ -118,14 +121,23 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 wrapper">
-            @foreach ($recentWorks as $work)
-                @include('frontend.components.recentworks', [
-                    'post' => $work,
-                    'colorsPublication' => $colorsPublication,
-                    'height' => '360px',
-                ])
-            @endforeach
+        <div class="wrapper">
+            <div class="owl-carousel recentwork-carousel ">
+                @foreach ($recentWorks as $work)
+                    @include('frontend.components.recentworks', [
+                        'post' => $work,
+                    ])
+                @endforeach
+            </div>
+            <!-- Next Previous Btn -->
+            <div class="__owl-nav">
+                <div class="recentwork-next-prev recentwork-next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="recentwork-next-prev recentwork-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+            </div>
         </div>
 
         <a href="/works" style="display: table" class="btn bg-primary-pink !px-28 !mt-10 mx-auto text-white">See
@@ -147,13 +159,67 @@
                     @include('frontend.components.publication_card', ['publication' => $publication])
                 @endforeach
             </div>
-            <a href="/publications" style="display: table" class="btn bg-primary-pink !px-28 !mt-10 mx-auto text-white">See
+            <a href="/publications" style="" class="btn bg-primary-pink !px-28 !mt-10 mx-auto text-white">See
                 Our Publications
             </a>
         </div>
     </section>
 @endsection
 
+@section('styles')
+    <link rel="stylesheet" href="./frontend/styles/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./frontend/styles/owl.theme.default.min.css" />
+@endsection
 
 @section('script')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./frontend/scripts/owl.carousel.min.js"></script>
+    <script>
+        $(".recentwork-carousel").owlCarousel({
+            loop: true,
+            items: 1,
+            margin: 20,
+            center: true,
+            dots: true,
+            rewind: true,
+            nav: true,
+            navText: [document.querySelector(".recentwork-next"), document.querySelector(".recentwork-prev")],
+            autoplay: false,
+            autoplayTimeout: 2500,
+            autoplayHoverPause: true,
+            slideTransition: "ease",
+        });
+
+        $(".publication-carousel").owlCarousel({
+            loop: true,
+            items: 4,
+            center: true,
+            rewind: true,
+            autoplay: true,
+            autoplayTimeout: 3200,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            slideTransition: "ease",
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 70,
+                    autoplayTimeout: 2200,
+                },
+                600: {
+                    items: 2,
+                },
+                1000: {
+                    items: 3,
+                },
+                1400: {
+                    items: 4,
+                    margin: 100,
+                },
+                1600: {
+                    margin: 30,
+                },
+            },
+        });
+    </script>
 @endsection
