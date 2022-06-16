@@ -143,7 +143,7 @@
             </div>
         </div>
 
-        <a href="/works" style="display: table" class="btn bg-primary-pink !px-28 !mt-10 mx-auto text-white">See
+        <a href="/blog" style="display: table" class="btn bg-primary-pink !px-28 !mt-10 mx-auto text-white">See
             Our Other Works</a>
     </section>
 
