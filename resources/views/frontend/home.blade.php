@@ -14,13 +14,16 @@
 
             <!-- Content wrapper -->
             <div class="px-4 md:px-0 max-w-4xl mx-auto relative">
-                <div class="w-56 mx-auto">
+                <div class="w-56 mx-auto logo">
                     @include('frontend.svg.logo')
                 </div>
-                <h1 class="text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">Justicia provide
+                <h1
+                    class="title text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">
+                    Justicia provide
                     legal
                     information for victims of abuse</h1>
-                <p class="text-lg tracking-wide text-white text-center mt-4">Our telephone advice lines provide vital free and
+                <p class="text-lg tracking-wide text-white text-center mt-4">Our telephone advice lines provide vital free
+                    and
                     confidential legal advice to women.</p>
             </div>
 
@@ -73,7 +76,7 @@
     <section>
         <div class="wrapper space-y-20">
             <!-- Vission -->
-            <div class="grid md:grid-cols-2 items-center relative">
+            <div class="vision grid md:grid-cols-2 items-center relative">
                 <div class="bg-dots">
                     <img class="h-[375px] object-contain relative z-10 drop-shadow-[0_35px_35px_rgba(255, 209, 227,0.25)]"
                         src="./frontend/assets/Vision.png" alt="Justicia Vision" />
@@ -159,9 +162,11 @@
                     @include('frontend.components.publication_card', ['publication' => $publication])
                 @endforeach
             </div>
-            <a href="/publications" style="" class="btn bg-primary-pink !px-28 !mt-10 mx-auto text-white">See
-                Our Publications
-            </a>
+            <div class="mt-10 mx-auto w-fit">
+                <a href="/publications" class="btn bg-primary-pink !px-28 mx-auto text-white block">See
+                    Our Publications
+                </a>
+            </div>
         </div>
     </section>
 @endsection
@@ -220,6 +225,18 @@
                     margin: 30,
                 },
             },
+        });
+    </script>
+
+    <script>
+        ScrollReveal().reveal('.logo', {
+            delay: 200
+        });
+        ScrollReveal().reveal('.title', {
+            delay: 230
+        });
+        ScrollReveal().reveal('.vision', {
+            delay: 230
         });
     </script>
 @endsection

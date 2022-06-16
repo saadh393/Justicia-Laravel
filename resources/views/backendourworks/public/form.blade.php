@@ -18,6 +18,16 @@
 						<fieldset><legend> Our Works</legend>
 									
 									  <div class="form-group row  " >
+										<label for="Id" class=" control-label col-md-4 text-left"> Id </label>
+										<div class="col-md-6">
+										  <input  type='text' name='id' id='id' value='{{ $row['id'] }}' 
+						     class='form-control form-control-sm ' /> 
+										 </div> 
+										 <div class="col-md-2">
+										 	
+										 </div>
+									  </div> 					
+									  <div class="form-group row  " >
 										<label for="Image" class=" control-label col-md-4 text-left"> Image </label>
 										<div class="col-md-6">
 										  
@@ -40,6 +50,16 @@
 										<div class="col-md-6">
 										  <input  type='text' name='Title' id='Title' value='{{ $row['Title'] }}' 
 						     class='form-control form-control-sm ' /> 
+										 </div> 
+										 <div class="col-md-2">
+										 	
+										 </div>
+									  </div> 					
+									  <div class="form-group row  " >
+										<label for="Description" class=" control-label col-md-4 text-left"> Description </label>
+										<div class="col-md-6">
+										  <textarea name='description' rows='5' id='description' class='form-control form-control-sm '  
+				           >{{ $row['description'] }}</textarea> 
 										 </div> 
 										 <div class="col-md-2">
 										 	
@@ -73,14 +93,14 @@
 									  <div class="form-group row  " >
 										<label for="Slide" class=" control-label col-md-4 text-left"> Slide </label>
 										<div class="col-md-6">
-										  <?php $slide = explode(",",$row['slide']); ?>
-					  
-					<input type='checkbox' name='slide[]' value ='1'   class=' minimal-green' 
-					@if(in_array('1',$slide))checked @endif 
-					 /> Show  
+										  
+					
+					<input type='radio' name='slide' value ='1'  @if($row['slide'] == '1') checked="checked" @endif class='minimal-green' > Show 
+					
+					<input type='radio' name='slide' value ='0'  @if($row['slide'] == '0') checked="checked" @endif class='minimal-green' > Hide  
 										 </div> 
 										 <div class="col-md-2">
-										 	<a href="#" data-toggle="tooltip" placement="left" class="tips" title="Show on Home Page"><i class="icon-question2"></i></a>
+										 	
 										 </div>
 									  </div> </fieldset></div>
 

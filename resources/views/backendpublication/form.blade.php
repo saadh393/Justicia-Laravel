@@ -31,6 +31,16 @@
 						<fieldset><legend> Publication</legend>
 									
 									  <div class="form-group row  " >
+										<label for="Id" class=" control-label col-md-4 text-left"> Id </label>
+										<div class="col-md-6">
+										  <input  type='text' name='id' id='id' value='{{ $row['id'] }}' 
+						     class='form-control form-control-sm ' /> 
+										 </div> 
+										 <div class="col-md-2">
+										 	
+										 </div>
+									  </div> 					
+									  <div class="form-group row  " >
 										<label for="Image" class=" control-label col-md-4 text-left"> Image </label>
 										<div class="col-md-6">
 										  

@@ -155,7 +155,7 @@ class UserController extends Controller {
 	
 		if(\Auth::check())
 		{
-			return redirect('')->with(['message'=>'success','Youre already login','status'=>'success']);
+			return redirect('/dashboard')->with(['message'=>'success','Youre already login','status'=>'success']);
 
 		} else {
 			$this->data['socialize'] =  config('services');
@@ -274,9 +274,9 @@ class UserController extends Controller {
 						else {
 							session($session);
 							if( config('sximo.cnf_front') =='false') :
-								return redirect('dashboard');						
+								return redirect('/dashboard');
 							else :
-								return redirect('');
+								return redirect('/dashboard');
 							endif;	
 						}				
 					}	
@@ -391,7 +391,8 @@ class UserController extends Controller {
 	public function getTheme() {
 		
 		return view('layouts.palette');
-	}	
+	}
+
 	public function postSaveprofile( Request $request)
 	{
 		if(!\Auth::check()) return redirect('user/login');
