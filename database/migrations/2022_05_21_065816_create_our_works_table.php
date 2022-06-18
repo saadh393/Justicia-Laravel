@@ -17,7 +17,7 @@ class CreateOurWorksTable extends Migration
             $table->increments('id');
             $table->string("Image");
             $table->string("Title");
-	        $table->string("description");
+	        $table->string("description", 60000);
             $table->string("Link");
             $table->date("Date");
             $table->boolean('slide')->default(0);

@@ -10,8 +10,13 @@ class BlogController extends Controller
 		$recentWorks = RecentWorks::latest()->get();
 
 		// Colors for Publication
-		$colorsPublication = ['bg-purple-800','bg-pink-500','bg-emerald-600','bg-orange-500'];
+		$colorsPublication = ['purple-800','pink-500','emerald-600','orange-500'];
 
 		return view('frontend.blog', ["recentWorks" => $recentWorks, 'colorsPublication' => $colorsPublication]);
+	}
+
+	public function details($id){
+		$blogDetails = RecentWorks::where('id', $id)->firstOrFail();
+		return view('frontend.blogDetails', ['blog' => $blogDetails]);
 	}
 }

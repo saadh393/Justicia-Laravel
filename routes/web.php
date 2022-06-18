@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,8 @@ Route::get('/', function () {
 //Default Controller
 Route::get('/', 'HomeController@index');
 Route::post('/', [HomeController::class, 'joinus_form_submission']);
-Route::get('/blog', 'BlogController@index');
+Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog/{id}', [BlogController::class, 'details']);
 Route::get('/publications', 'PublicationController@index');
 
 

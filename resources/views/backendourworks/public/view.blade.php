@@ -10,7 +10,13 @@
 		<table class="table table-striped table-bordered" >
 			<tbody>	
 		
-					
+			
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Link', (isset($fields['Link']['language'])? $fields['Link']['language'] : array())) }}</td>
+						<td>{{ $row->Link}} </td>
+						
+					</tr>
+						
 					<tr>
 						<td width='30%' class='label-view text-right'></td>
 						<td> <a href="javascript:history.go(-1)"> Back To Grid <a> </td>

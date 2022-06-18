@@ -1,5 +1,8 @@
 @extends('frontend.layout')
 
+@section('title', 'Home | Justicia')
+
+
 @section('content')
     <!-- Hero Section -->
     <section>
@@ -14,7 +17,7 @@
 
             <!-- Content wrapper -->
             <div class="px-4 md:px-0 max-w-4xl mx-auto relative">
-                <div class="w-56 mx-auto logo">
+                <div class="w-56 mx-auto wow fadeIn">
                     @include('frontend.svg.logo')
                 </div>
                 <h1
@@ -48,20 +51,20 @@
 
             <!-- Ladies Standing -->
             <div
-                class="overflow-x-hidden flex absolute -bottom-[125px] md:-bottom-[95px] items-center w-full justify-center gap-10">
-                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 5Justicia.svg" />
-                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 11Justicia.svg" />
-                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 12Justicia.svg" />
-                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 4Justicia.svg" />
-                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 9Justicia.svg" />
-                <img class="object-contain h-[200px] md:h-full" src="./frontend/assets/Hero/Asset 3Justicia.svg" />
+                class="overflow-x-hidden flex absolute -bottom-[125px] md:-bottom-[95px] items-end w-full justify-center gap-10">
+                <img class="object-contain h-[200px] md:h-full wow slideInLeft"  src="./frontend/assets/Hero/Asset 5Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full wow slideInLeft" src="./frontend/assets/Hero/Asset 11Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 12Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 4Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 9Justicia.svg" />
+                <img class="object-contain h-[200px] md:h-full wow slideInRight" src="./frontend/assets/Hero/Asset 3Justicia.svg" />
             </div>
         </div>
     </section>
 
     <!-- who we are  -->
-    <section class="py-28 mt-10 " id="about">
-        <div class="wrapper space-y-6">
+    <section class="py-28 mt-10 ">
+        <div class="wrapper space-y-6 ">
             <h1 class="font-bold text-3xl text-primary-pink text-center">Who We Are</h1>
             <p class="paragraph text-center">
                 Justicia is many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
@@ -77,11 +80,11 @@
         <div class="wrapper space-y-20">
             <!-- Vission -->
             <div class="vision grid md:grid-cols-2 items-center relative">
-                <div class="bg-dots">
+                <div class="bg-dots wow fadeIn">
                     <img class="h-[375px] object-contain relative z-10 drop-shadow-[0_35px_35px_rgba(255, 209, 227,0.25)]"
                         src="./frontend/assets/Vision.png" alt="Justicia Vision" />
                 </div>
-                <div class="space-y-5 text-center lg:text-left">
+                <div class="space-y-5 text-center lg:text-left wow fadeIn">
                     <h3 class="text-2xl font-bold text-text-black">Our Vision</h3>
                     <p class="paragraph">
                         Justicia Feminist Network envisions a society where gender justice is a reality, where the justice
@@ -90,25 +93,23 @@
                         are able to use their full potential to thrive and contribute in the legal sector in a more
                         meaningful way.
                     </p>
-                    <a class="block link" href="#">Learn More</a>
                 </div>
             </div>
 
             <!-- Mission -->
             <div class="grid md:grid-cols-2 items-center relative">
-                <div class="bg-dots mission-dots">
+                <div class="bg-dots mission-dots wow fadeIn">
                     <img class="h-[375px] object-contain relative z-10" src="./frontend/assets/Mision.svg"
                         alt="Justicia Vision" />
                 </div>
 
-                <div class="space-y-5 col-start-1 lg:row-start-1 text-center lg:text-left">
+                <div class="space-y-5 col-start-1 lg:row-start-1 text-center lg:text-left wow fadeIn">
                     <h3 class="text-2xl font-bold text-text-black">Our Mision</h3>
                     <p class="paragraph">
                         Our mission is to support initiatives and movements that are based on feminist principles in order
                         to challenge the status quo to bring appropriate change and reform in the legal system by
                         engaging more intergenerational feminist lawyers and justice sector actors
                     </p>
-                    <a class="block link" href="#">Learn More</a>
                 </div>
             </div>
         </div>
@@ -129,6 +130,7 @@
                 @foreach ($recentWorks as $work)
                     @include('frontend.components.recentworks', [
                         'post' => $work,
+                        'colors' => $colors
                     ])
                 @endforeach
             </div>
@@ -172,14 +174,22 @@
 @endsection
 
 @section('styles')
+    <!-- Slider -->
     <link rel="stylesheet" href="./frontend/styles/owl.carousel.min.css" />
     <link rel="stylesheet" href="./frontend/styles/owl.theme.default.min.css" />
+
 @endsection
 
 @section('script')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./frontend/scripts/owl.carousel.min.js"></script>
+
+
+
     <script>
+
+        new WOW().init();
+
         $(".recentwork-carousel").owlCarousel({
             loop: true,
             items: 1,
@@ -225,18 +235,6 @@
                     margin: 30,
                 },
             },
-        });
-    </script>
-
-    <script>
-        ScrollReveal().reveal('.logo', {
-            delay: 200
-        });
-        ScrollReveal().reveal('.title', {
-            delay: 230
-        });
-        ScrollReveal().reveal('.vision', {
-            delay: 230
         });
     </script>
 @endsection

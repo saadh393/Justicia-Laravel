@@ -1,5 +1,5 @@
 <div
-    class="flex flex-col lg:h-[431px] shadow-md rounded-lg overflow-hidden border my-20 {{ $loop->index % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse' }}">
+    class="flex flex-col lg:h-[431px] shadow-md rounded-lg overflow-hidden border my-20  wow fadeIn {{ $loop->index % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse' }}">
     <img class="lg:min-w-[378px] lg:h-[431px] object-cover" src="./uploads/publication/{{ $publication->Image }}"
         alt="{{ $publication->Title }}" />
 

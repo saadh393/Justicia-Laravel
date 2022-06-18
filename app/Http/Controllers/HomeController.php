@@ -10,13 +10,13 @@ class HomeController extends Controller
 {
 
 	public function index(Request $request)	{
-		$recentWorks = RecentWorks::latest()->take(3)->get();
+		$recentWorks = RecentWorks::latest()->take(5)->get();
 		$recentPublications = Publications::latest()->take(3)->get();
 
 		// Colors for Publication
 		$colorsPublication = ['bg-purple-800','bg-pink-500','bg-emerald-600','bg-orange-500'];
 
-		return view('frontend.home', ['recentWorks' => $recentWorks, 'recentPublications' => $recentPublications, 'colorsPublication' => $colorsPublication]);
+		return view('frontend.home', ['recentWorks' => $recentWorks, 'recentPublications' => $recentPublications, 'colors' => $colorsPublication]);
 	}
 
 	public function joinus_form_submission(Request  $request){

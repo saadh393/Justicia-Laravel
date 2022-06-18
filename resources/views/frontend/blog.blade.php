@@ -28,7 +28,7 @@
             @foreach ($recentWorks as $work)
                 @include('frontend.components.recentWorks_blog_details', [
                     'post' => $work,
-                    'flex' => $colorsPublication,
+                    'color' => $colorsPublication,
                 ])
             @endforeach
         </div>

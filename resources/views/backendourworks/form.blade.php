@@ -106,11 +106,11 @@
 									  <div class="form-group row  " >
 										<label for="Slide" class=" control-label col-md-4 text-left"> Slide </label>
 										<div class="col-md-6">
-										  
-					
-					<input type='radio' name='slide' value ='1'  @if($row['slide'] == '1') checked="checked" @endif class='minimal-green' > Show 
-					
-					<input type='radio' name='slide' value ='0'  @if($row['slide'] == '0') checked="checked" @endif class='minimal-green' > Hide  
+										  <?php $slide = explode(",",$row['slide']); ?>
+					  
+					<input type='checkbox' name='slide[]' value ='1'   class=' minimal-green' 
+					@if(in_array('1',$slide))checked @endif 
+					 /> Show  
 										 </div> 
 										 <div class="col-md-2">
 										 	

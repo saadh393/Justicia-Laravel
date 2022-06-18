@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Justicia | Home</title>
-    <meta property="og:title" content="Justicia Feminist Network" />
-    <meta property="og:og:description" content="Justicia Feminist Network, established in 2016, is the first legal feminist network in Bangladesh
+    <title>@yield('title', "Justicia | Feminist Network")</title>
+    <meta property="og:title" content="@yield('meta-title', "Justicia | Feminist Network")" />
+    <meta property="og:og:description" content="@yield('meta-description', 'Justicia Feminist Network, established in 2016, is the first legal feminist network in Bangladesh
         led by young women lawyers who are advocating for gender justice and strengthening the
-        capacity of feminist lawyers, youths and justice sector actors" />
+        capacity of feminist lawyers, youths and justice sector actors')" />
     <meta property="og:image" content="https://via.placeholder.com/1080x720.webp/933DB5/FBEEE4?text=Justicia" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1080" />
@@ -34,6 +34,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('frontend/styles/style.css') }}" />
+
+    <!-- Animations -->
+    <script src="./frontend/scripts/wow.min.js"></script>
+    <link rel="stylesheet" href="./frontend/styles/animate.css" />
 
     @yield('styles')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -66,7 +70,6 @@
                 <a onclick="joinUsFadeIn()">Contact Us</a>
             </li>
         </ul>
-
     </nav>
 
     <!-- Mobile Navbar -->
