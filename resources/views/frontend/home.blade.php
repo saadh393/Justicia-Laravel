@@ -22,12 +22,8 @@
                 </div>
                 <h1
                     class="title text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">
-                    Justicia provide
-                    legal
-                    information for victims of abuse</h1>
-                <p class="text-lg tracking-wide text-white text-center mt-4">Our telephone advice lines provide vital free
-                    and
-                    confidential legal advice to women.</p>
+                    CHALLENGING THE ' STATUS QUO'</h1>
+
             </div>
 
             <!-- Bottom Grass Overlay -->
