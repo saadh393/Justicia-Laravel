@@ -33,7 +33,7 @@
 
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{ asset('frontend/styles/style.css') }}" />
+    <link rel="stylesheet" href="./frontend/styles/style.css" />
 
     <!-- Animations -->
     <script src="./frontend/scripts/wow.min.js"></script>
