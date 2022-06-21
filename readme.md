@@ -6,11 +6,12 @@
 The mission of **Justicia** Project is to abolish child marriage, promote the rights of women and girls, and work towards women’s economic empowerment. WAP uses advocacy to promote and protect the rights of vulnerable and marginalized women and girls.
 
 ## Todo
+- [ ] Show Join Us Data
 - [x] Import All the pages
 - [X] Connection with Database
-- [ ] Fetch and show data from database
-- [ ] Integrate TailwindCSS
-- [ ] Improve Design and Typography
+- [x] Fetch and show data from database
+- [x] Integrate TailwindCSS
+- [x] Improve Design and Typography
 
 ## Installation Instruction
 <details>
