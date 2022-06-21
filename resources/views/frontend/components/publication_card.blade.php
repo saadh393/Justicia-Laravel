@@ -5,10 +5,10 @@
 
     <div class="h-full flex flex-col justify-center p-5 lg:px-10">
         <div>
-            <h1 class="text-2xl lg:text-4xl line-clamp-2">{{ $publication->Title }}</h1>
+            <h1 class="text-2xl lg:text-4xl line-clamp-2 break-all">{{ $publication->Title }}</h1>
             <span class="mt-5 block">{{ $publication->Date }}</span>
         </div>
-        <a href="{{ $publication->Link }}" target="_blank"
+        <a href="{{ $publication->Link }}" target="_blank" download
             class="mt-10 lg:mt-14 text-lg font-medium text-primary-pink hover:underline underline-offset-4">
             <svg class="inline" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

@@ -7,7 +7,7 @@
     <!-- Hero Section -->
     <section>
         <!-- Pink wrapper -->
-        <div class="primary-gradient-pink h-[650px] py-20 lg:py-28 relative hero-section">
+        <div class="primary-gradient-pink py-20 lg:py-28 relative hero-section grid place-items-center">
             <!-- Left Side Overlay -->
             @include('frontend.svg.heroLeftSvg')
 
@@ -22,7 +22,8 @@
                 </div>
                 <h1
                     class="title text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">
-                    CHALLENGING THE ' STATUS QUO'</h1>
+                    Justicia Feminist Network </h1>
+                <p class="text-lg tracking-wide text-white text-center my-4">CHALLENGING THE ' STATUS QUO'</p>
 
             </div>
 
@@ -47,7 +48,7 @@
 
             <!-- Ladies Standing -->
             <div
-                class="overflow-x-hidden flex absolute -bottom-[125px] md:-bottom-[95px] items-end w-full justify-center gap-10">
+                class="overflow-x-hidden flex absolute -bottom-[125px] md:-bottom-[185px] items-end w-full justify-center gap-5 md:gap-10 lg:gap-14">
                 <img class="object-contain h-[200px] md:h-full wow slideInLeft"  src="./frontend/assets/Hero/Asset 5Justicia.svg" />
                 <img class="object-contain h-[200px] md:h-full wow slideInLeft" src="./frontend/assets/Hero/Asset 11Justicia.svg" />
                 <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 12Justicia.svg" />
@@ -59,14 +60,12 @@
     </section>
 
     <!-- who we are  -->
-    <section class="py-28 mt-10 ">
+    <section class="py-28 mt-10 md:mt-28">
         <div class="wrapper space-y-6 ">
-            <h1 class="font-bold text-3xl text-primary-pink text-center">Who We Are</h1>
+            <h1 class="font-bold text-3xl text-primary-pink text-center">About Us</h1>
             <p class="paragraph text-center">
-                Justicia is many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                in some form, by injected humour, or randomised words which
-                don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure
-                there isn't anything embarrassing hidden in the middle of text.
+                Justicia Feminist Network, established in 2016, is the first legal feminist network in Bangladesh led by young women lawyers who are advocating for gender justice and strengthening the capacity of feminist lawyers, youths and justice sector actors.
+                Our members are intergenerational feminists from the justice sector who share a common goal to challenge the status quo to ensure gender justice in society through advocacy, law reform and capacity strengthening
             </p>
         </div>
     </section>
@@ -104,7 +103,7 @@
                     <p class="paragraph">
                         Our mission is to support initiatives and movements that are based on feminist principles in order
                         to challenge the status quo to bring appropriate change and reform in the legal system by
-                        engaging more intergenerational feminist lawyers and justice sector actors
+                        engaging more intergenerational feminist lawyers and justice sector actors.
                     </p>
                 </div>
             </div>
@@ -115,10 +114,7 @@
     <section class="py-16 space-y-10 lg:space-y-20 relative">
         <div class="wrapper space-y-6">
             <h1 class="font-bold text-3xl text-primary-pink text-center">Our Recent Works</h1>
-            <p class="paragraph text-center">
-                We do many things variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                in some form, by injected humour, or randomised words
-            </p>
+
         </div>
 
         <div class="wrapper">
@@ -150,10 +146,7 @@
         <div class="wrapper space-y-6" x-data="{ publications: [1, 2, 3, 4] }">
             <div class="space-y-6">
                 <h1 class="font-bold text-3xl text-primary-pink text-center">Our Publications</h1>
-                <p class="paragraph text-center">
-                    We do many things variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in some form, by injected humour, or randomised words
-                </p>
+
             </div>
             <div class="wrapper">
                 @foreach ($recentPublications as $publication)
@@ -194,7 +187,7 @@
             dots: true,
             rewind: true,
             nav: true,
-            navText: [document.querySelector(".recentwork-next"), document.querySelector(".recentwork-prev")],
+            navText: [document.querySelector(".recentwork-prev"), document.querySelector(".recentwork-next")],
             autoplay: false,
             autoplayTimeout: 2500,
             autoplayHoverPause: true,

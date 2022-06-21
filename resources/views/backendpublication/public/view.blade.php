@@ -30,7 +30,7 @@
 					</tr>
 				
 					<tr>
-						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Link', (isset($fields['Link']['language'])? $fields['Link']['language'] : array())) }}</td>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Downloadable File', (isset($fields['Link']['language'])? $fields['Link']['language'] : array())) }}</td>
 						<td>{{ $row->Link}} </td>
 						
 					</tr>

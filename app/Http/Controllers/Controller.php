@@ -306,7 +306,7 @@ abstract class Controller extends BaseController {
 						$validation = 'mimes:jpg,jpeg,png,gif,bmp';
 					} 
 					else {
-						$validation = 'mimes:zip,csv,xls,doc,docx,xlsx';						
+						$validation = 'mimes:zip,csv,xls,doc,docx,xlsx,pdf';						
 					}
 
 					if($form['option']['image_multiple'] != '1')

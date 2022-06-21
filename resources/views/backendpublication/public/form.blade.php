@@ -56,10 +56,18 @@
 										 </div>
 									  </div> 					
 									  <div class="form-group row  " >
-										<label for="Link" class=" control-label col-md-4 text-left"> Link </label>
+										<label for="Downloadable File" class=" control-label col-md-4 text-left"> Downloadable File <span class="asterix"> * </span></label>
 										<div class="col-md-6">
-										  <input  type='text' name='Link' id='Link' value='{{ $row['Link'] }}' 
-						     class='form-control form-control-sm ' /> 
+										  
+						<div class="fileUpload btn " > 
+						    <span>  <i class="fa fa-copy"></i>  </span>
+						    <div class="title"> Browse File </div>
+						    <input type="file" name="Link" class="upload"       />
+						</div>
+						<div class="Link-preview preview-upload">
+							{!! SiteHelpers::showUploadedFile( $row["Link"],"/uploads/publication/files/") !!}
+						</div>
+					 
 										 </div> 
 										 <div class="col-md-2">
 										 	
