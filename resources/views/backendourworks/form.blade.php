@@ -69,10 +69,20 @@
 										 </div>
 									  </div> 					
 									  <div class="form-group row  " >
+										<label for="ShortDescription" class=" control-label col-md-4 text-left"> ShortDescription </label>
+										<div class="col-md-6">
+										  <textarea name='shortDescription' rows='5' id='shortDescription' class='form-control form-control-sm '  
+				           >{{ $row['shortDescription'] }}</textarea> 
+										 </div> 
+										 <div class="col-md-2">
+										 	
+										 </div>
+									  </div> 					
+									  <div class="form-group row  " >
 										<label for="Description" class=" control-label col-md-4 text-left"> Description </label>
 										<div class="col-md-6">
-										  <textarea name='description' rows='5' id='description' class='form-control form-control-sm '  
-				           >{{ $row['description'] }}</textarea> 
+										  <textarea name='description' rows='5' id='editor' class='form-control form-control-sm editor '  
+						 >{{ $row['description'] }}</textarea> 
 										 </div> 
 										 <div class="col-md-2">
 										 	

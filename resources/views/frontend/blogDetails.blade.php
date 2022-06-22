@@ -2,6 +2,7 @@
 
 @section('title', $blog->Title. ' | Justicia')
 @section('meta-title', $blog->Title. ' | Justicia')
+@section('meta-description', $blog->shortDescription)
 
 @section('content')
 
