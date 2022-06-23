@@ -38,11 +38,11 @@
 
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href={{asset("frontend/styles/style.css")}} />
+    <link rel="stylesheet" href={{url("frontend/styles/style.css")}} />
 
     <!-- Animations -->
-    <script src={{ asset("frontend/scripts/wow.min.js") }}></script>
-    <link rel="stylesheet" href={{ asset("frontend/styles/animate.css") }} />
+    <script src={{ url("frontend/scripts/wow.min.js") }}></script>
+    <link rel="stylesheet" href={{ url("frontend/styles/animate.css") }} />
 
     @yield('styles')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
