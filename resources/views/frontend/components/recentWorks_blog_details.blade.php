@@ -8,6 +8,6 @@
         <a href="/blog/{{ $work->id }}" class="hover:underline hover:decoration-[#f8dfcb] ">
             <h1 class="recentwork-card--title text-2xl line-clamp-2">{{ $work->Title }}</h1>
         </a>
-        <p class="paragraph-normal text-base text-white line-clamp-4"> {{ $work->description }} </p>
+        <p class="paragraph-normal text-base text-white line-clamp-4"> {{ $work->shortDescription }} </p>
     </div>
 </div>
