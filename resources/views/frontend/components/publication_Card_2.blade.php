@@ -1,6 +1,6 @@
-<div class="flex flex-col lg:flex-row lg:h-[210px ] shadow-md rounded-lg overflow-hidden border my-2">
+<div class="flex flex-col lg:flex-row lg:h-[210px] shadow-md rounded-lg overflow-hidden border my-2">
     <div class="lg:min-w-[230px] h-[216px] bg-slate-100">
-        <img class="lg:min-w-[230px] object-cover h-full" src="./uploads/publication/{{ $publication->Image }}"
+        <img class="w-full lg:min-w-[230px] object-cover h-full" src="./uploads/publication/{{ $publication->Image }}"
             alt="{{ $publication->Title }}">
     </div>
     <div class="h-full w-full flex flex-col justify-center p-5">

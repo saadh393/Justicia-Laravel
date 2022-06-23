@@ -265,9 +265,9 @@ class UserController extends Controller {
 						{
 
 							if( config('sximo.cnf_front') =='false') :
-								return response()->json(['status' => 'success', 'url' => url('dashboard')]);					
+								return response()->json(['status' => 'success', 'url' => url('/dashboard')]);					
 							else :
-								return response()->json(['status' => 'success', 'url' => url('')]);
+								return response()->json(['status' => 'success', 'url' => url('/dashboard')]);
 							endif;	
 
 						} 
