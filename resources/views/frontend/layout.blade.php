@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link rel="icon" type="image/png" href={{ asset("./frontend/favicon_io/favicon.ico") }} />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset("./frontend/favicon_io/apple-touch-icon.png") }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset("./frontend/favicon_io/favicon-32x32.png") }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset("./frontend/favicon_io/favicon-16x16.png") }}">
-    <link rel="manifest" href="{{ asset("./frontend/favicon_io/site.webmanifest") }}">
+    <link rel="icon" type="image/png" href={{ secure_asset("./frontend/favicon_io/favicon.ico") }} />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ secure_asset("./frontend/favicon_io/apple-touch-icon.png") }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ secure_asset("./frontend/favicon_io/favicon-32x32.png") }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ secure_asset("./frontend/favicon_io/favicon-16x16.png") }}">
+    <link rel="manifest" href="{{ secure_asset("./frontend/favicon_io/site.webmanifest") }}">
 
     <title>@yield('title', "Justicia | Feminist Network")</title>
     <meta property="og:title" content="@yield('meta-title', "Justicia | Feminist Network")"/>
@@ -38,11 +38,11 @@
 
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href={{url("frontend/styles/style.css")}} />
+    <link rel="stylesheet" href={{secure_asset("frontend/styles/style.css")}} />
 
     <!-- Animations -->
-    <script src={{ url("frontend/scripts/wow.min.js") }}></script>
-    <link rel="stylesheet" href={{ url("frontend/styles/animate.css") }} />
+    <script src={{ secure_asset("frontend/scripts/wow.min.js") }}></script>
+    <link rel="stylesheet" href={{ secure_asset("frontend/styles/animate.css") }} />
 
     @yield('styles')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -120,8 +120,8 @@
 @yield('content')
 
 <footer class="lg:h-[600px] grid place-items-center relative">
-    <img class="hidden lg:block absolute left-0 bottom-0" src={{ asset("frontend/assets/footer-left.svg") }} alt=""/>
-    <img class="hidden lg:block absolute right-0 bottom-0" src={{ asset("frontend/assets/footer-right.svg") }} alt=""/>
+    <img class="hidden lg:block absolute left-0 bottom-0" src={{ secure_asset("frontend/assets/footer-left.svg") }} alt=""/>
+    <img class="hidden lg:block absolute right-0 bottom-0" src={{ secure_asset("frontend/assets/footer-right.svg") }} alt=""/>
     <div class="wrapper text-center py-20 pt-32 lg:p-0 lg:mt-32">
         <h1 class="text-4xl text-white">Interested in Working with us?</h1>
         <a class="cursor-pointer btn bg-[#FF438A] !inline-block my-10 text-slate-50 !px-14 !rounded-full transtion-all hover:shadow-lg hover:shadow-pink-600/50 "
