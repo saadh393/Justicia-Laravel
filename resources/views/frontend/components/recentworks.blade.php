@@ -1,6 +1,6 @@
 <div class="recentwork-card">
     <img class="recentwork-card--img" src="/uploads/blog/{{ $work->Image }}" alt="{{ $work->Title }}" />
-    <div class="recentwork-card--content gap-y-3 {{$colors[$work->id%4]}}">
+    <div class="recentwork-card--content gap-y-3 {{ $colors[$work->id % 4] }}">
         <h3 class="recentwork-card--date">November 18, 2021</h3>
         <h1 class="recentwork-card--title line-clamp-2">{{ $work->Title }}</h1>
         <p class="paragraph-normal text-base text-white line-clamp-5">
