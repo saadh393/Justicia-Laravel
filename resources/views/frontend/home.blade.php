@@ -60,7 +60,7 @@
 
     <!-- who we are  -->
     <section class="py-28 mt-10 md:mt-28">
-        <div class="wrapper space-y-6 ">
+        <div class="wrapper space-y-6 " id="about">
             <h1 class="font-bold text-3xl text-primary-pink text-center">About Us</h1>
             <p class="paragraph text-center">
                 Justicia Feminist Network, established in 2016, is the first legal feminist network in Bangladesh led by young women lawyers who are advocating for gender justice and strengthening the capacity of feminist lawyers, youths and justice sector actors.
@@ -131,8 +131,9 @@
             </div>
         </div>
 
-        <a href="/blog" style="display: table" class="btn bg-primary-pink !px-28 !mt-10 mx-auto text-white">See
-            Our Other Works</a>
+        <div class="mt-10 mx-auto w-fit">
+            <a href="/blog" class="btn bg-primary-pink text-center px-10 lg:!px-28 mx-auto text-white block">See Our Works</a>
+        </div>
     </section>
 
     <!-- Our Publications -->
@@ -149,7 +150,7 @@
             </div>
 
             <div class="mt-10 mx-auto w-fit  {{count($recentPublications) > 3 ?: "hidden"}}">
-                <a href="/publications" class="btn bg-primary-pink !px-28 mx-auto text-white block">See Our Publications</a>
+                <a href="/publications" class="btn bg-primary-pink text-center px-10 lg:!px-28 mx-auto text-white block">See Our Publications</a>
             </div>
         </div>
     </section>

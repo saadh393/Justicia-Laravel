@@ -3,7 +3,7 @@
 @section('title', $blog->Title . ' | Justicia')
 @section('meta-title', $blog->Title . ' | Justicia')
 @section('meta-description', $blog->shortDescription)
-@section('meta-image', '/uploads/blog/{{ $blog->Image }}')
+@section('meta-image', 'https://justiciabd.com/uploads/blog/'.  $blog->Image )
 
 @section('content')
 
@@ -33,9 +33,9 @@
         </div>
     </section>
 
-    <section class="wrapper py-10 pb-20">
+    <section class="wrapper py-10 pb-20 blog-description">
         <img class="w-[500px] object-cover mx-auto" src="/uploads/blog/{{ $blog->Image }}" alt="{{ $blog->Title }}" />
-        <p class="py-5">
+        <p class="py-5 ">
             {!! $blog->description !!}
         </p>
     </section>

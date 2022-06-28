@@ -1465,4 +1465,10 @@ footer svg {
 
 }
 
+
 /* Our Recent Work | Slider Section | Ended */
+
+
+.blog-description > p > img{
+  margin: 0 auto !important;
+}

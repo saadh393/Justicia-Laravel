@@ -1,11 +1,11 @@
 <div
     class="flex flex-col lg:h-[431px] shadow-md rounded-lg overflow-hidden border my-20  wow fadeIn {{ $loop->index % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse' }}">
-    <img class="lg:min-w-[378px] lg:h-[431px] object-cover" src="./uploads/publication/{{ $publication->Image }}"
+    <img class="lg:min-w-[378px] h-[350px] lg:h-[431px] object-cover" src="./uploads/publication/{{ $publication->Image }}"
         alt="{{ $publication->Title }}" />
 
     <div class="h-full flex flex-col justify-center p-5 lg:px-10">
         <div>
-            <h1 class="text-2xl lg:text-4xl line-clamp-2 break-all">{{ $publication->Title }}</h1>
+            <h1 class="text-2xl lg:text-4xl line-clamp-2">{{ $publication->Title }}</h1>
             <span class="mt-5 block">{{ $publication->Date }}</span>
         </div>
         <a href="{{ $publication->Link }}" target="_blank" download

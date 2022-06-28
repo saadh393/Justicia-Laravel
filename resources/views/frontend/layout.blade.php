@@ -20,7 +20,7 @@
     <meta property="og:og:description" content="@yield('meta-description', 'Justicia Feminist Network, established in 2016, is the first legal feminist network in Bangladesh led by young women lawyers who are advocating for gender justice and strengthening the capacity of feminist lawyers, youths and justice sector actors')"/>
 
     <!-- Meta Image -->
-    <meta property="og:image" content="@yield('meta-image', "{{ secure_asset('./frontend/meta-images/default.jpg') }}")"/>
+    <meta property="og:image" content="@yield('meta-image', "https://justiciabd.com/frontend/meta-images/default.jpg")"/>
     <meta property="og:image:type" content="image/jpeg"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
