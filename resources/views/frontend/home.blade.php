@@ -47,20 +47,13 @@
             </div>
 
             <!-- Ladies Standing -->
-            <div
-                    class="overflow-x-hidden flex absolute -bottom-[125px] md:-bottom-[185px] items-end w-full justify-center gap-5 md:gap-10 lg:gap-14">
-                <img class="object-contain h-[200px] md:h-full wow slideInLeft"
-                     src="./frontend/assets/Hero/Asset 5Justicia.svg"/>
-                <img class="object-contain h-[200px] md:h-full wow slideInLeft"
-                     src="./frontend/assets/Hero/Asset 11Justicia.svg"/>
-                <img class="object-contain h-[200px] md:h-full wow fadeIn"
-                     src="./frontend/assets/Hero/Asset 12Justicia.svg"/>
-                <img class="object-contain h-[200px] md:h-full wow fadeIn"
-                     src="./frontend/assets/Hero/Asset 4Justicia.svg"/>
-                <img class="object-contain h-[200px] md:h-full wow fadeIn"
-                     src="./frontend/assets/Hero/Asset 9Justicia.svg"/>
-                <img class="object-contain h-[200px] md:h-full wow slideInRight"
-                     src="./frontend/assets/Hero/Asset 3Justicia.svg"/>
+            <div class="overflow-x-hidden flex absolute -bottom-[125px] md:-bottom-[185px] items-end w-full justify-center gap-5 md:gap-10 lg:gap-14">
+                <img class="object-contain h-[200px] md:h-full wow slideInLeft" src="./frontend/assets/Hero/Asset 5Justicia.svg"/>
+                <img class="object-contain h-[200px] md:h-full wow slideInLeft" src="./frontend/assets/Hero/Asset 11Justicia.svg"/>
+                <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 12Justicia.svg"/>
+                <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 4Justicia.svg"/>
+                <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 9Justicia.svg"/>
+                <img class="object-contain h-[200px] md:h-full wow slideInRight" src="./frontend/assets/Hero/Asset 3Justicia.svg"/>
             </div>
         </div>
     </section>
@@ -70,12 +63,8 @@
         <div class="wrapper space-y-6 ">
             <h1 class="font-bold text-3xl text-primary-pink text-center">About Us</h1>
             <p class="paragraph text-center">
-                Justicia Feminist Network, established in 2016, is the first legal feminist network in Bangladesh led by
-                young women lawyers who are advocating for gender justice and strengthening the capacity of feminist
-                lawyers, youths and justice sector actors.
-                Our members are intergenerational feminists from the justice sector who share a common goal to challenge
-                the status quo to ensure gender justice in society through advocacy, law reform and capacity
-                strengthening
+                Justicia Feminist Network, established in 2016, is the first legal feminist network in Bangladesh led by young women lawyers who are advocating for gender justice and strengthening the capacity of feminist lawyers, youths and justice sector actors.
+                Our members are intergenerational feminists from the justice sector who share a common goal to challenge the status quo to ensure gender justice in society through advocacy, law reform and capacity strengthening
             </p>
         </div>
     </section>
@@ -86,18 +75,13 @@
             <!-- Vission -->
             <div class="vision grid md:grid-cols-2 items-center relative">
                 <div class="bg-dots wow fadeIn">
-                    <img class="h-[375px] object-contain relative z-10 drop-shadow-[0_35px_35px_rgba(255, 209, 227,0.25)]"
-                         src="./frontend/assets/Vision.png" alt="Justicia Vision"/>
+                    <img class="h-[375px] object-contain relative z-10 drop-shadow-[0_35px_35px_rgba(255, 209, 227,0.25)]" src="./frontend/assets/Vision.png" alt="Justicia Vision"/>
                 </div>
                 <div class="space-y-5 text-center lg:text-left wow fadeIn">
                     <h3 class="text-2xl font-bold text-text-black">Our Vision</h3>
                     <p class="paragraph">
-                        Justicia Feminist Network envisions a society where gender justice is a reality, where the
-                        justice
-                        sector is more gender sensitive, not only towards women but also to persons with all gender
-                        identities, and fosters an enabling environment for all women from the justice sector so that
-                        they
-                        are able to use their full potential to thrive and contribute in the legal sector in a more
+                        Justicia Feminist Network envisions a society where gender justice is a reality, where the justice sector is more gender sensitive, not only towards women but also to persons with all gender
+                        identities, and fosters an enabling environment for all women from the justice sector so that they are able to use their full potential to thrive and contribute in the legal sector in a more
                         meaningful way.
                     </p>
                 </div>
@@ -106,16 +90,13 @@
             <!-- Mission -->
             <div class="grid md:grid-cols-2 items-center relative">
                 <div class="bg-dots mission-dots wow fadeIn">
-                    <img class="h-[375px] object-contain relative z-10" src="./frontend/assets/Mision.svg"
-                         alt="Justicia Vision"/>
+                    <img class="h-[375px] object-contain relative z-10" src="./frontend/assets/Mision.svg" alt="Justicia Vision"/>
                 </div>
 
                 <div class="space-y-5 col-start-1 lg:row-start-1 text-center lg:text-left wow fadeIn">
                     <h3 class="text-2xl font-bold text-text-black">Our Mision</h3>
                     <p class="paragraph">
-                        Our mission is to support initiatives and movements that are based on feminist principles in
-                        order
-                        to challenge the status quo to bring appropriate change and reform in the legal system by
+                        Our mission is to support initiatives and movements that are based on feminist principles in order to challenge the status quo to bring appropriate change and reform in the legal system by
                         engaging more intergenerational feminist lawyers and justice sector actors.
                     </p>
                 </div>
