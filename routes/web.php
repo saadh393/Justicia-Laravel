@@ -25,6 +25,9 @@ Route::post('/', [HomeController::class, 'joinus_form_submission']);
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blog/{id}', [BlogController::class, 'details']);
 Route::get('/publications', 'PublicationController@index');
+Route::get('/test', function(){
+	return view('frontend.test');
+});
 
 
 Route::get('dashboard/import', 'DashboardController@getImport');
