@@ -15,7 +15,7 @@
                 <label class="block text-gray-700 text-base mb-2" for="name">Name</label>
                 <input name="name"
                     class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="John Doe" type="text" id="name" />
+                    placeholder="John Doe" type="text" id="name" required/>
             </div>
 
             <!-- Email -->
@@ -23,19 +23,19 @@
                 <label class="block text-gray-700 text-base mb-2" for="Email">Email</label>
                 <input name="email"
                     class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="example@email.com" type="email" id="Email" />
+                    placeholder="example@email.com" type="email" id="Email" required/>
             </div>
 
             <!-- Phone -->
             <div class="mb-4 pr-1 w-full">
-                <label class="block text-gray-700 text-base mb-2" for="Phone">Phone</label>
+                <label class="block text-gray-700 text-base mb-2" for="Phone" required>Phone</label>
                 <input name="phone"
                     class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     placeholder="0123456789" type="phone" id="Phone" />
             </div>
 
             <label class="md:w-2/3 block text-gray-500 font-light mb-4">
-                <input class="mr-2 leading-tight" type="checkbox" />
+                <input class="mr-2 leading-tight" type="checkbox" required/>
                 <span class="text-sm">
                     I have read the <a class="text-primary underline" href="#">Privacy Policy</a>
                 </span>
@@ -49,6 +49,7 @@
 </section>
 
 <script>
+
 $('#joinus_form').submit((e) => {
     e.preventDefault();
 
@@ -57,7 +58,11 @@ $('#joinus_form').submit((e) => {
         data : $('#joinus_form').serialize(),
         type : 'post',
         success : () => {
-            alert("Submited");
+            $('#joinus_form').trigger('reset');
+            joinUsFadeOut();
+            Swal.fire('Saved!', '', 'success').then(result =>{
+
+            })
         }
     })
 })

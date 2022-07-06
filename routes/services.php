@@ -9,4 +9,9 @@ Route::resource('services/backendpublication','Services\BackendpublicationContro
 Route::resource('services/backendourworks','Services\BackendourworksController');
 // End Routes for backendourworks 
 
+                    
+// Start Routes for backendjoinus 
+Route::resource('services/backendjoinus','Services\BackendjoinusController');
+// End Routes for backendjoinus 
+
                     ?>
