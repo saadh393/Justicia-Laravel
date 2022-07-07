@@ -24,14 +24,44 @@
 
 	<div class="table-responsive">
 		<table class="table table-striped table-bordered " >
-			<tbody>	
-		
-					<tr>
-						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Link', (isset($fields['Link']['language'])? $fields['Link']['language'] : array())) }}</td>
-						<td>{{ $row->Link}} </td>
-						
-					</tr>
-				
+			<tbody>
+
+			<tr>
+				<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Id', (isset($fields['id']['language'])? $fields['id']['language'] : array())) }}</td>
+				<td>{{ $row->id}} </td>
+
+			</tr>
+
+			<tr>
+				<td width='30%' class='label-view text-right' >{{ SiteHelpers::activeLang('Image', (isset($fields['Image']['language'])? $fields['Image']['language'] : array())) }}</td>
+				<td style="height:250px">{!! SiteHelpers::formatRows($row->Image,$fields['Image'],$row ) !!} </td>
+
+			</tr>
+
+			<tr>
+				<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Title', (isset($fields['Title']['language'])? $fields['Title']['language'] : array())) }}</td>
+				<td>{{ $row->Title}} </td>
+
+			</tr>
+
+			<tr>
+				<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Short Description', (isset($fields['Link']['language'])? $fields['Link']['language'] : array())) }}</td>
+				<td>{{ $row->shortDescription}} </td>
+
+			</tr>
+
+			<tr>
+				<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Date', (isset($fields['Date']['language'])? $fields['Date']['language'] : array())) }}</td>
+				<td>{{ $row->Date}} </td>
+
+			</tr>
+
+			<tr>
+				<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Slide', (isset($fields['slide']['language'])? $fields['slide']['language'] : array())) }}</td>
+				<td>{{ $row->slide}} </td>
+
+			</tr>
+
 			</tbody>	
 		</table>   
 

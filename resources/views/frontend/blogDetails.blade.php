@@ -4,6 +4,9 @@
 @section('meta-title', $blog->Title . ' | Justicia')
 @section('meta-description', $blog->shortDescription)
 @section('meta-image', 'https://justiciabd.com/uploads/blog/'.  $blog->Image )
+@section('styles')
+    <link rel="stylesheet" href={{ secure_asset('frontend/styles/typography.css') }} />
+@endsection
 
 @section('content')
 
@@ -33,10 +36,10 @@
         </div>
     </section>
 
-    <section class="wrapper py-10 pb-20 blog-description">
+    <section class="wrapper py-10 pb-20 blog-description ">
         <img class="w-[500px] object-cover mx-auto" src="/uploads/blog/{{ $blog->Image }}" alt="{{ $blog->Title }}" />
-        <p class="py-5 ">
+        <article class="py-5 prose lg:prose-xl">
             {!! $blog->description !!}
-        </p>
+        </article>
     </section>
 @endsection
