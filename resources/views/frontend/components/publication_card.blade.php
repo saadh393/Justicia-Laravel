@@ -1,3 +1,5 @@
+<!-- publication_card.blade.php -->
+
 <div
     class="flex flex-col lg:h-[431px] shadow-md rounded-lg overflow-hidden border my-20  wow fadeIn {{ $loop->index % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse' }}">
     <img class="lg:min-w-[378px] h-[350px] lg:h-[431px] object-cover" src="./uploads/publication/{{ $publication->Image }}"
@@ -8,7 +10,7 @@
             <h1 class="text-2xl lg:text-4xl line-clamp-2">{{ $publication->Title }}</h1>
             <span class="mt-5 block">{{ $publication->Date }}</span>
         </div>
-        <a href="{{ $publication->Link }}" target="_blank" download
+        <a href="{{ asset('/uploads/publication/files/'. $publication->Link ) }}" target="_blank" download
             class="mt-10 lg:mt-14 text-lg font-medium text-primary-pink hover:underline underline-offset-4">
             <svg class="inline" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
