@@ -43,6 +43,23 @@
     <script src={{ secure_asset('frontend/scripts/wow.min.js') }}></script>
     <link rel="stylesheet" href={{ secure_asset('frontend/styles/animate.css') }} />
 
+    <script>
+        var verifyCallback = function(response) {
+            alert(response);
+        };
+        var widgetId1;
+
+        var onloadCallback = function() {
+            // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+            // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+            widgetId1 = grecaptcha.render('captcha', {
+                'sitekey' : '6Lc2rdAgAAAAAL8JxtH4GmTYRr_H15psNeHh-jxt',
+                'theme' : 'light'
+            });
+
+        };
+    </script>
+
     @yield('styles')
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -153,7 +170,7 @@
 
 @yield('script')
 
-
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </body>
 
 <script>

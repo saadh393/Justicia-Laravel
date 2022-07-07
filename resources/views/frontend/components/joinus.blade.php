@@ -1,3 +1,5 @@
+
+
 <!-- Join as a volunteer -->
 <section id="joinus" class="opacity-0 z-50 hidden fixed left-0 top-0 right-0 bottom-0 transition-opacity">
     <div class="fixed left-0 top-0 right-0 bottom-0 bg-black bg-opacity-30 w-full h-full overflow-hidden ">
@@ -9,7 +11,7 @@
         </div>
 
         <h1 class="section-title my-6 text-2xl text-center">Join Us <span class="text-gray-800">as Volunteer</span></h1>
-        <form action="" method="POST" id="joinus_form">
+        <form action="javascript:alert(grecaptcha.getResponse(widgetId1));" method="POST" id="joinus_form">
             <!-- Name -->
             <div class="mb-4 pr-1 ">
                 <label class="block text-gray-700 text-base mb-2" for="name">Name</label>
@@ -41,8 +43,8 @@
                 </span>
             </label>
 
-            <div class="mt-4">
-                <div class="g-recaptcha" data-sitekey="6Lc2rdAgAAAAAL8JxtH4GmTYRr_H15psNeHh-jxt"></div>
+            <div class="mt-4" id="captcha">
+
             </div>
             <input class="btn mx-auto bg-[#933DB5] text-white w-full mt-10" type="submit" value="Reach Me"/>
 
@@ -57,6 +59,12 @@
     $('#joinus_form').submit((e) => {
         e.preventDefault();
 
+        let captchaResponse = grecaptcha.getResponse()
+        if(captchaResponse.length == 0){
+            Swal.fire('Recaptcha Verficiation is needed', '', 'warning')
+            return;
+        }
+
         $.ajax({
             url: "{{url('/')}}",
             data: $('#joinus_form').serialize(),
@@ -69,5 +77,8 @@
                 })
             }
         })
-    })
+    });
+
 </script>
+
+
