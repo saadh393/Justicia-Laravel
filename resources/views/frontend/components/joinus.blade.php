@@ -3,7 +3,7 @@
     <div class="fixed left-0 top-0 right-0 bottom-0 bg-black bg-opacity-30 w-full h-full overflow-hidden ">
     </div>
     <div id="joinUs_content"
-        class="w-[460px] bg-white px-10 py-8 mx-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-0 transition-transform rounded-md ">
+         class="w-[460px] bg-white px-10 py-8 mx-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-0 transition-transform rounded-md ">
         <div class="block absolute right-6 top-6  cursor-pointer " id="joinus_close">
             @include('frontend.svg.close')
         </div>
@@ -14,24 +14,24 @@
             <div class="mb-4 pr-1 ">
                 <label class="block text-gray-700 text-base mb-2" for="name">Name</label>
                 <input name="name"
-                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="John Doe" type="text" id="name" required/>
+                       class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       placeholder="John Doe" type="text" id="name" required/>
             </div>
 
             <!-- Email -->
             <div class="mb-4 pr-1">
                 <label class="block text-gray-700 text-base mb-2" for="Email">Email</label>
                 <input name="email"
-                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="example@email.com" type="email" id="Email" required/>
+                       class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       placeholder="example@email.com" type="email" id="Email" required/>
             </div>
 
             <!-- Phone -->
             <div class="mb-4 pr-1 w-full">
                 <label class="block text-gray-700 text-base mb-2" for="Phone" required>Phone</label>
                 <input name="phone"
-                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="0123456789" type="phone" id="Phone" />
+                       class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       placeholder="0123456789" type="phone" id="Phone"/>
             </div>
 
             <label class="md:w-2/3 block text-gray-500 font-light mb-4">
@@ -41,29 +41,33 @@
                 </span>
             </label>
 
-            <input class="btn mx-auto bg-[#933DB5] text-white w-full mt-10" type="submit" value="Reach Me" />
+            <div class="mt-4">
+                <div class="g-recaptcha" data-sitekey="6Lc2rdAgAAAAAL8JxtH4GmTYRr_H15psNeHh-jxt"></div>
+            </div>
+            <input class="btn mx-auto bg-[#933DB5] text-white w-full mt-10" type="submit" value="Reach Me"/>
+
             <a class="text-center inline-block w-full pt-5 text-sm text-slate-700 cursor-pointer"
-                onclick="joinUsFadeOut()">Cancel</a>
+               onclick="joinUsFadeOut()">Cancel</a>
         </form>
     </div>
 </section>
 
 <script>
 
-$('#joinus_form').submit((e) => {
-    e.preventDefault();
+    $('#joinus_form').submit((e) => {
+        e.preventDefault();
 
-    $.ajax({
-        url : "{{url('/')}}",
-        data : $('#joinus_form').serialize(),
-        type : 'post',
-        success : () => {
-            $('#joinus_form').trigger('reset');
-            joinUsFadeOut();
-            Swal.fire('Saved!', '', 'success').then(result =>{
+        $.ajax({
+            url: "{{url('/')}}",
+            data: $('#joinus_form').serialize(),
+            type: 'post',
+            success: () => {
+                $('#joinus_form').trigger('reset');
+                joinUsFadeOut();
+                Swal.fire('Saved!', '', 'success').then(result => {
 
-            })
-        }
+                })
+            }
+        })
     })
-})
 </script>
