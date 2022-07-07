@@ -10,8 +10,8 @@ class HomeController extends Controller
 {
 
 	public function index(Request $request)	{
-		$recentWorks = RecentWorks::latest()->take(5)->get();
-		$recentPublications = Publications::where('slide', 1)->take(3)->get();
+		$recentWorks = RecentWorks::where('slide', 1)->orderByDesc('id')->get();
+		$recentPublications = Publications::where('slide', 1)->orderByDesc('id')->take(3)->get();
 
 		// Colors for Publication
 		$colorsPublication = ['bg-purple-800','bg-pink-500','bg-emerald-600','bg-orange-500'];
