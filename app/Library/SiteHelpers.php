@@ -1319,7 +1319,7 @@ public static function alphaID($in, $to_num = false, $pad_up = false, $passKey =
 			{
 				$path_file = str_replace("./","",$path);
 				return '<p><a href="'.asset( $path_file . $file).'" target="_blank" class="previewImage">
-				<img src="'.asset( $path_file . $file ).'" border="0"  class="img-circle" style="height: 170px; object-fit: cover;aspect-ratio: 16 / 9;" /></a></p>';
+				<img src="'.asset( $path_file . $file ).'" border="0"  class="img-circle" style="height: 300px; object-fit: cover;aspect-ratio: 16 / 9;" /></a></p>';
 			} else {
 				$path_file = str_replace("./","",$path);
 				return '<p> <a href="'.url($path_file . $file).'" target="_blank"> '.$file.' </a>';
@@ -1428,7 +1428,7 @@ public static function alphaID($in, $to_num = false, $pad_up = false, $passKey =
 					{
 						if(file_exists('.'.$format_value . $val))
 						$vals .= '<a href="'.url( $format_value . $val).'" target="_blank" class="previewImage">
-						<img src="'.asset( $format_value . $val ).'" border="0" class="img-circle avatar" style="margin-right:2px; height: 300px; object-fit: cover;aspect-ratio: 16 / 9;"  /></a>';
+						<img src="'.asset( $format_value . $val ).'" border="0" class="img-circle avatar" style="margin-right:2px; height: 150px; object-fit: cover;aspect-ratio: 16 / 9;"  /></a>';
 					}
 				}	 
 		    $value = $vals;
