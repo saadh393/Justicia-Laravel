@@ -51,6 +51,7 @@
                 <img class="object-contain h-[200px] md:h-full wow slideInLeft" src="./frontend/assets/Hero/Asset 5Justicia.svg"/>
                 <img class="object-contain h-[200px] md:h-full wow slideInLeft" src="./frontend/assets/Hero/Asset 11Justicia.svg"/>
                 <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 12Justicia.svg"/>
+                <img class="object-contain h-[200px] md:h-[300px] wow fadeIn" src="./frontend/assets/Hero/lawyer.png"/>
                 <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 4Justicia.svg"/>
                 <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 9Justicia.svg"/>
                 <img class="object-contain h-[200px] md:h-full wow slideInRight" src="./frontend/assets/Hero/Asset 3Justicia.svg"/>
