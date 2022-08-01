@@ -50,10 +50,10 @@
             <div class="overflow-x-hidden flex absolute -bottom-[125px] md:-bottom-[185px] items-end w-full justify-center gap-5 md:gap-10 lg:gap-14">
                 <img class="object-contain h-[200px] md:h-full wow slideInLeft" src="./frontend/assets/Hero/Asset 5Justicia.svg"/>
                 <img class="object-contain h-[200px] md:h-full wow slideInLeft" src="./frontend/assets/Hero/Asset 11Justicia.svg"/>
-                <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 12Justicia.svg"/>
+                <img class="object-contain h-[200px] md:h-full wow slideInLeft" src="./frontend/assets/Hero/Asset 12Justicia.svg"/>
                 <img class="object-contain h-[225px] md:h-[310px] wow fadeIn" src="./frontend/assets/Hero/lawyer.png"/>
-                <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 4Justicia.svg"/>
-                <img class="object-contain h-[200px] md:h-full wow fadeIn" src="./frontend/assets/Hero/Asset 9Justicia.svg"/>
+                <img class="object-contain h-[200px] md:h-full wow slideInRight" src="./frontend/assets/Hero/Asset 4Justicia.svg"/>
+                <img class="object-contain h-[200px] md:h-full wow slideInRight" src="./frontend/assets/Hero/Asset 9Justicia.svg"/>
                 <img class="object-contain h-[200px] md:h-full wow slideInRight" src="./frontend/assets/Hero/Asset 3Justicia.svg"/>
             </div>
         </div>
