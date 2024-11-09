@@ -56,7 +56,7 @@
 										 </div>
 									  </div> 					
 									  <div class="form-group row  " >
-										<label for="Downloadable File" class=" control-label col-md-4 text-left"> Downloadable File <span class="asterix"> * </span></label>
+										<label for="Downloadable File" class=" control-label col-md-4 text-left"> Downloadable File </label>
 										<div class="col-md-6">
 										  
 						<div class="fileUpload btn " > 
