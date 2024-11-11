@@ -45,5 +45,4 @@
 
 @section('script') 
 <script src={{ secure_asset('frontend/dflip/js/dflip.min.js') }} type="text/javascript"></script>
-
 @endsection

@@ -141,7 +141,7 @@
     <section class="py-16 space-y-20">
         <div class="wrapper space-y-6">
             <div class="space-y-6">
-                <h1 class="font-bold text-3xl text-primary-pink text-center">Downloadable Materials</h1>
+                <h1 class="font-bold text-3xl text-primary-pink text-center">Publications</h1>
             </div>
 
             <div class="wrapper">
@@ -162,11 +162,18 @@
     <link rel="stylesheet" href="./frontend/styles/owl.carousel.min.css"/>
     <link rel="stylesheet" href="./frontend/styles/owl.theme.default.min.css"/>
 
+    <!-- Flipbook StyleSheet -->
+  <link href={{ secure_asset('frontend/dflip/css/dflip.min.css') }}  rel="stylesheet" type="text/css">
+
+  <!-- Icons Stylesheet -->
+  <link href={{ secure_asset('frontend/dflip/css/themify-icons.min.css') }} rel="stylesheet" type="text/css">
+
 @endsection
 
 @section('script')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./frontend/scripts/owl.carousel.min.js"></script>
+    <script src={{ secure_asset('frontend/dflip/js/dflip.min.js') }} type="text/javascript"></script>
 
 
 
