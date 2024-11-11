@@ -29,7 +29,7 @@
             <li class="px-4 py-1 rounded-full bg-[#933DB5] text-white cursor-pointer" data-category="all">All</li>
             <li class="px-4 py-1 bg-gray-200 rounded-full cursor-pointer" data-category="capacity_building">Capacity Building</li>
             <li class="px-4 py-1 bg-gray-200 rounded-full cursor-pointer" data-category="research">Research</li>
-            <li class="px-4 py-1 bg-gray-200 rounded-full cursor-pointer" data-category="meeting">Meeting</li>
+            <!-- <li class="px-4 py-1 bg-gray-200 rounded-full cursor-pointer" data-category="meeting">Meeting</li> -->
         </ul>
         </div>
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 wrapper">
