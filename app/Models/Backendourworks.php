@@ -15,12 +15,12 @@ class backendourworks extends Sximo  {
 
 	public static function querySelect(  ){
 		
-		return "  SELECT our_works.* FROM our_works  ";
+		return " SELECT our_works.* FROM our_works ";
 	}	
 
 	public static function queryWhere(  ){
 		
-		return "  WHERE our_works.id IS NOT NULL ";
+		return " WHERE our_works.id IS NOT NULL ";
 	}
 	
 	public static function queryGroup(){

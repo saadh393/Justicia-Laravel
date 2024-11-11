@@ -16,6 +16,12 @@
 						<td>{{ $row->Link}} </td>
 						
 					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Category', (isset($fields['Category']['language'])? $fields['Category']['language'] : array())) }}</td>
+						<td>{{ $row->Category}} </td>
+						
+					</tr>
 						
 					<tr>
 						<td width='30%' class='label-view text-right'></td>

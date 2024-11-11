@@ -1,5 +1,13 @@
 @extends('frontend.layout')
 
+@section('styles')
+<!-- Flipbook StyleSheet -->
+  <link href={{ secure_asset('frontend/dflip/css/dflip.min.css') }}  rel="stylesheet" type="text/css">
+
+  <!-- Icons Stylesheet -->
+  <link href={{ secure_asset('frontend/dflip/css/themify-icons.min.css') }} rel="stylesheet" type="text/css">
+@endsection
+
 @section('content')
     <!-- Hero Section -->
     <section>
@@ -33,4 +41,9 @@
 
         <!-- <button class="btn bg-primary-pink !px-14 mx-auto text-white">See Our Other Works</button> -->
     </section>
+@endsection
+
+@section('script') 
+<script src={{ secure_asset('frontend/dflip/js/dflip.min.js') }} type="text/javascript"></script>
+
 @endsection

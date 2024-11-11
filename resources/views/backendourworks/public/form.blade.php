@@ -112,6 +112,24 @@
 										 <div class="col-md-2">
 										 	
 										 </div>
+									  </div> 					
+									  <div class="form-group row  " >
+										<label for="Category" class=" control-label col-md-4 text-left"> Category </label>
+										<div class="col-md-6">
+										  
+					<?php $Category = explode(',',$row['Category']);
+					$Category_opt = array( 'capacity_building' => 'Capacity Building' ,  'research' => 'Research' ,  'meeting' => 'Meeting' , ); ?>
+					<select name='Category' rows='5'   class='select2 '  > 
+						<?php 
+						foreach($Category_opt as $key=>$val)
+						{
+							echo "<option  value ='$key' ".($row['Category'] == $key ? " selected='selected' " : '' ).">$val</option>"; 						
+						}						
+						?></select> 
+										 </div> 
+										 <div class="col-md-2">
+										 	
+										 </div>
 									  </div> </fieldset></div>
 
 			<div style="clear:both"></div>	
