@@ -9,5 +9,8 @@
       }
       ,"tailwindCSS.includeLanguages": {
         "plaintext": "html"
+      },
+      "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
       }
 }

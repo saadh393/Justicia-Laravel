@@ -14,4 +14,14 @@ Route::resource('backendourworks','BackendourworksController');
 Route::resource('backendjoinus','BackendjoinusController');
 // End Routes for backendjoinus 
 
+                    
+// Start Routes for membercontroller 
+Route::resource('membercontroller','MembercontrollerController');
+// End Routes for membercontroller 
+
+                    
+// Start Routes for referralcontroller 
+Route::resource('referralcontroller','ReferralcontrollerController');
+// End Routes for referralcontroller 
+
                     ?>

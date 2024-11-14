@@ -1,25 +1,30 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\RecentWorks;
 use App\Publications;
 use App\JoinUsForm;
+use App\Members;
 
 
 class HomeController extends Controller
 {
 
-	public function index(Request $request)	{
+	public function index(Request $request)
+	{
 		$recentWorks = RecentWorks::where('slide', 1)->orderByDesc('id')->get();
 		$recentPublications = Publications::where('slide', 1)->orderByDesc('id')->take(3)->get();
 
 		// Colors for Publication
-		$colorsPublication = ['bg-purple-800','bg-pink-500','bg-emerald-600','bg-orange-500'];
+		$colorsPublication = ['bg-purple-800', 'bg-pink-500', 'bg-emerald-600', 'bg-orange-500'];
 
 		return view('frontend.home', ['recentWorks' => $recentWorks, 'recentPublications' => $recentPublications, 'colors' => $colorsPublication]);
 	}
 
-	public function joinus_form_submission(Request  $request){
+	public function joinus_form_submission(Request  $request)
+	{
 		$table = new JoinUsForm();
 		$table->name = $request->post('name');
 		$table->email = $request->post('email');
@@ -27,5 +32,20 @@ class HomeController extends Controller
 		$table->save();
 		return "Success";
 	}
-}
 
+	public function members(Request $request)
+	{
+		$members = new Members();
+
+		return view('frontend.members', [
+			'members' => $members->get()
+		]);
+	}
+
+	public function referral(Request $request)
+	{
+
+
+		return view('frontend.referral');
+	}
+}

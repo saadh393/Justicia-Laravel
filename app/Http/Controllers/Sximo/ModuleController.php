@@ -78,7 +78,8 @@ class ModuleController extends Controller {
             'module_title'    =>'required',
             'module_note'    =>'required',
             'module_db'        =>'required',
-        );    
+        );   
+        // ddd($request);
         
         $validator = Validator::make($request->all(), $rules);    
         if ($validator->passes()) {

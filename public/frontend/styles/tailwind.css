@@ -192,6 +192,9 @@
 .max-w-4xl {
     max-width: 56rem
 }
+.max-w-md {
+    max-width: 28rem
+}
 .flex-grow {
     flex-grow: 1
 }
@@ -320,6 +323,9 @@
 .border {
     border-width: 1px
 }
+.border-none {
+    border-style: none
+}
 .bg-\[\#933DB5\] {
     --tw-bg-opacity: 1;
     background-color: rgb(147 61 181 / var(--tw-bg-opacity))
@@ -436,6 +442,10 @@
 .px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem
+}
+.px-0 {
+    padding-left: 0px;
+    padding-right: 0px
 }
 .pb-20 {
     padding-bottom: 5rem
@@ -689,9 +699,6 @@
     }
     .lg\:mt-32 {
         margin-top: 8rem
-    }
-    .lg\:mt-14 {
-        margin-top: 3.5rem
     }
     .lg\:block {
         display: block
