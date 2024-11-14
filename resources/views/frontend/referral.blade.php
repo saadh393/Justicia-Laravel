@@ -19,9 +19,12 @@
             <div class="w-56 mx-auto wow fadeIn">
                 @include('frontend.svg.logo')
             </div>
-            <h1
-                class="title text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">
-                Our Members </h1>
+            <h1 class="title text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">
+                Referral
+            </h1>
+            <p class="text-lg tracking-wide text-white text-center my-4">
+                Justicia Feminist Network, established in 2016, is the first legal feminist network in Bangladesh
+            </p>
 
         </div>
 
