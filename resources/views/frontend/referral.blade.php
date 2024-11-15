@@ -55,7 +55,7 @@
     <div id="joinUs_content"
         class="w-[460px] bg-white px-10 py-10 mx-auto rounded-md ">
 
-        <form action="javascript:alert(grecaptcha.getResponse(widgetId1));" method="POST" id="joinus_form">
+        <form id="form" action="{{ route('contact.submit') }}" method="POST">
             <!-- Name -->
             <div class="mb-4 pr-1 ">
                 <label class="block text-gray-700 text-base mb-2" for="name">Name</label>
@@ -102,5 +102,33 @@
 @endsection
 
 @section('script')
-<!-- Any additional scripts needed for this page -->
+<!-- Add this before closing </body> tag -->
+<script>
+    document.querySelector('#form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        let formData = new FormData(this);
+
+        fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                if (data.status === 'success') {
+                    alert(data.message);
+                    this.reset(); // Reset form on success
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                alert('An error occurred. Please try again.');
+            });
+    });
+</script>
 @endsection
