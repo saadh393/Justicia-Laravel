@@ -25,7 +25,7 @@
 
     <section class="py-16 space-y-20">
         <div>
-            <ul class='flex gap-2 mx-auto items-center justify-center' id="categoryFilter">
+            <ul class='flex gap-2 mx-auto items-center justify-center flex-wrap' id="categoryFilter">
             <li class="px-4 py-1 rounded-full bg-[#933DB5] text-white cursor-pointer" data-category="all">All</li>
             <li class="px-4 py-1 bg-gray-200 rounded-full cursor-pointer" data-category="capacity_building">Capacity Building</li>
             <li class="px-4 py-1 bg-gray-200 rounded-full cursor-pointer" data-category="research">Research</li>

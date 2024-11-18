@@ -28,6 +28,7 @@
 		<li>{{ $error }}</li>
 		@endforeach
 	</ul>
+
 	<div class="row">
 		<div class="col-md-6">
 			<fieldset>
@@ -47,29 +48,46 @@
 					</div>
 				</div>
 
-				<div class="form-group ">
+				{{-- <div class="form-group ">
 					<label for="Link" class=" control-label col-md-4 text-left"> Link </label>
 					<div class="col-md-6">
 						<input type='text' name='Link' id='Link' value='{{ $row['Link'] }}'
 							class='form-control form-control-sm ' />
 					</div>
+				</div> --}}
+				
+				<div class="form-group">
+					<label for="Image" class=" control-label col-md-4 text-left"> Image </label>
+					<div class="w-full">
 
+						<div class="fileUpload btn ">
+							<span> <i class="fa fa-camera"></i> </span>
+							<div class="title"> Browse File </div>
+							<input type="file" name="Image" class="upload" accept="image/x-png,image/gif,image/jpeg" />
+						</div>
+						<div class="Image-preview preview-upload max-w-full ">
+							{!! SiteHelpers::showUploadedFile( $row["Image"],"/uploads/blog/") !!}
+						</div>
+
+					</div>
+				
 				</div>
+
+				<hr/>
+
 				<div class="row">
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-2">
 						<label for="Slide" class=" control-label col-md-4 text-left"> Slide </label>
-						<div class="col-md-6">
+						<div class="">
 							<?php $slide = explode(",", $row['slide']); ?>
 
 							<input type='checkbox' name='slide[]' value='1' class=' minimal-green' @if(in_array('1',$slide))checked @endif /> Show
 						</div>
-						<div class="col-md-2">
-
-						</div>
+						
 					</div>
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-5">
 						<label for="Date" class=" control-label  text-left"> Date </label>
-						<div class="col-md-6">
+						<div class="">
 
 							<div class="input-group input-group-sm m-b" style="width:150px !important;">
 								{!! Form::text('Date', $row['Date'],array('class'=>'form-control form-control-sm date')) !!}
@@ -79,8 +97,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-group col-md-4">
-						<div class="col-md-6">
+					<div class="form-group col-md-5">
+						<div class="">
 							<label for="Category" class=" control-label col-md-4 text-left"> Category </label>
 
 							<?php $Category = explode(',', $row['Category']);
@@ -92,43 +110,23 @@
 								}
 								?></select>
 						</div>
-						<div class="col-md-2">
-
-						</div>
-					</div>
+						
+					</div>					
 				</div>
 			</fieldset>
 		</div>
+		
 		<div class="col-md-6">
-			<fieldset>
+			<fieldset style="height: 100%">
 				<legend> Advanced Info</legend>
 
-				<div class="form-group row  ">
-					<label for="Image" class=" control-label col-md-4 text-left"> Image </label>
-					<div class="col-md-6">
-
-						<div class="fileUpload btn ">
-							<span> <i class="fa fa-camera"></i> </span>
-							<div class="title"> Browse File </div>
-							<input type="file" name="Image" class="upload" accept="image/x-png,image/gif,image/jpeg" />
-						</div>
-						<div class="Image-preview preview-upload">
-							{!! SiteHelpers::showUploadedFile( $row["Image"],"/uploads/blog/") !!}
-						</div>
-
+				
+				<div class="form-group " >
+					<label for="Description" class=" control-label col-md-4 text-left" style="font-weight: bold; padding-left: 0; padding-bottom: 5px; height: 100%"> Description </label>
+					<div class="w-full" style="height: 100%">
+						<textarea name='description' rows='5' id='editor' class='form-control form-control-sm editor ' style="height: 100%">{{ $row['description'] }}</textarea>
 					</div>
-					<div class="col-md-2">
-
-					</div>
-				</div>
-				<div class="form-group row  ">
-					<label for="Description" class=" control-label col-md-4 text-left"> Description </label>
-					<div class="col-md-6">
-						<textarea name='description' rows='5' id='editor' class='form-control form-control-sm editor '>{{ $row['description'] }}</textarea>
-					</div>
-					<div class="col-md-2">
-
-					</div>
+					
 				</div>
 			</fieldset>
 		</div>

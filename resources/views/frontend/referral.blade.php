@@ -1,6 +1,6 @@
 @extends('frontend.layout')
 
-@section('title', 'Members | Justicia')
+@section('title', 'Referrals | Justicia')
 
 @section('content')
 <!-- Hero Section -->
@@ -60,7 +60,7 @@
             <div class="mb-4 pr-1 ">
                 <label class="block text-gray-700 text-base mb-2" for="name">Name</label>
                 <input name="name"
-                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  disabled:bg-slate-100"
                     placeholder="John Doe" type="text" id="name" required />
             </div>
 
@@ -68,7 +68,7 @@
             <div class="mb-4 pr-1">
                 <label class="block text-gray-700 text-base mb-2" for="Email">Email</label>
                 <input name="email"
-                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline disabled:bg-slate-100"
                     placeholder="example@email.com" type="email" id="Email" required />
             </div>
 
@@ -76,18 +76,19 @@
             <div class="mb-4 pr-1 w-full">
                 <label class="block text-gray-700 text-base mb-2" for="Phone" required>Phone</label>
                 <input name="phone"
-                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline  disabled:bg-slate-100"
                     placeholder="0123456789" type="phone" id="Phone" />
             </div>
 
             <div class="mb-4 pr-1 w-full">
                 <label class="block text-gray-700 text-base " for="Phone" required>Message</label>
                 <textarea name="message"
-                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required
+                    class="appearance-none font-light border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline disabled:bg-slate-100"
                     placeholder="Your message" rows="6" type="phone" id="Phone"></textarea>
             </div>
 
-            <input class="btn mx-auto bg-[#933DB5] text-white w-full mt-4" type="submit" value="Reach Us" />
+            <input  class="btn mx-auto bg-[#933DB5] text-white w-full mt-4  disabled:bg-slate-100  disabled:text-slate-700" type="submit" value="Reach Us" />
 
 
         </form>
@@ -108,6 +109,11 @@
         e.preventDefault();
 
         let formData = new FormData(this);
+         
+        // Disable the form
+        this.querySelectorAll('input, button, textarea, select').forEach(function(element) {
+            element.disabled = true;
+        });
 
         fetch(this.action, {
                 method: 'POST',
@@ -118,17 +124,31 @@
             })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                
                 if (data.status === 'success') {
-                    alert(data.message);
+                    Swal.fire({
+                        title: "Success",
+                        text: "We recieved your request",
+                        icon: "success"
+                    });
+                    
                     this.reset(); // Reset form on success
                 } else {
-                    alert(data.message);
+                    Swal.fire({
+                        title: "Error",
+                        text: "Something Went Wrong",
+                        icon: "error"
+                    });
                 }
             })
             .catch(error => {
                 alert('An error occurred. Please try again.');
+            }).finally(() => {
+            // Re-enable the form
+            this.querySelectorAll('input, button, textarea, select').forEach(function(element) {
+                element.disabled = false;
             });
+        });
     });
 </script>
 @endsection
