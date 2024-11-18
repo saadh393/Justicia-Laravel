@@ -69,7 +69,7 @@
 
 <body>
 <!-- Navbar -->
-<nav class="hidden w-fit top-8 left-1/2 absolute -translate-x-1/2 z-50 bg-slate-50/20 px-14 py-4 lg:block mx-auto backdrop-blur-xl rounded-full">
+<nav class="hidden  top-8 left-1/2 absolute -translate-x-1/2 z-50 bg-slate-50/20 px-14 py-4 lg:block mx-auto backdrop-blur-xl rounded-full" style="width : max-content">
     <ul class="flex gap-8 w-full">
         <li class="text-white hover:text-slate-100">
             <a href="/">Home</a>
