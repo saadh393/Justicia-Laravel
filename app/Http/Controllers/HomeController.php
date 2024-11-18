@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use App\RecentWorks;
 use App\Publications;
 use App\JoinUsForm;
+use App\Mail\HelloMail;
 use App\Referral;
 use App\Members;
-
+use Barryvdh\Debugbar\Facades\Debugbar;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -60,8 +63,9 @@ class HomeController extends Controller
 		]);
 
 		try {
+			
 			// Create new member
-			$member = Referral::create([
+			$referral = Referral::create([
 				'name' => $validated['name'],
 				'email' => $validated['email'],
 				'contact' => $validated['phone'],
@@ -69,16 +73,31 @@ class HomeController extends Controller
 				'pending' => true
 			]);
 
+			
+
+			Mail::to("saadh3939@gmail.com")->send(new HelloMail([
+				'name' => $referral->name,
+				'email' => $referral->email,
+				'contact' => $referral->contact,
+				'message' => $referral->message
+			]));
+
 			// Return success response
 			return response()->json([
 				'status' => 'success',
 				'message' => 'Your message has been submitted successfully!'
 			]);
 		} catch (\Exception $e) {
+			Log::error('Referral Submission Error', [
+				'error_message' => $e->getMessage(),
+				'error_trace' => $e->getTraceAsString(),
+				'input_data' => $validated
+			]);
+
 			// Return error response
 			return response()->json([
 				'status' => 'error',
-				'message' => $e
+				'message' => $e->getMessage()
 			], 500);
 		}
 	}
