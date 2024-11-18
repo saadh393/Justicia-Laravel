@@ -91,6 +91,10 @@
             <a href="/referral">Referral</a>
         </li>
 
+        <li class="text-white hover:text-slate-100">
+            <a href="/members">Members</a>
+        </li>
+
         <li class="text-white hover:text-slate-100 cursor-pointer">
             <a onclick="joinUsFadeIn()">Contact Us</a>
         </li>
@@ -131,6 +135,10 @@
 
         <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut()">
             <a href="/referral">Referral</a>
+        </li>
+
+        <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut()">
+            <a href="/members">Members</a>
         </li>
 
         <li class="text-slate-600 hover:text-violet-600" onclick="mobileNavFadeOut(joinUsFadeIn)">
