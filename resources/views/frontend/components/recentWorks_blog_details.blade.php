@@ -4,7 +4,7 @@
 
     <div class="recentwork-card--content gap-y-3 rounded-none !flex-grow-1 rounded-br-lg rounded-bl-lg bg-{{$color[$work->id%4]}}"
          style="flex-grow: 1">
-        <h3 class="recentwork-card--date">{{ $work->Date }}</h3>
+        <h3 class="recentwork-card--date">{{ date('d F Y', strtotime($work->Date)) }}</h3>
         <a href="/blog/{{ $work->id }}" class="hover:underline hover:decoration-[#f8dfcb] ">
             <h1 class="recentwork-card--title text-2xl line-clamp-2">{{ $work->Title }}</h1>
         </a>
