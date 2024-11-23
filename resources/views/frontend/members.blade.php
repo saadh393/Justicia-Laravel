@@ -8,20 +8,20 @@
         <!-- Pink wrapper -->
         <div class="primary-gradient-pink py-20 lg:py-28 relative hero-section grid place-items-center">
             <!-- Left Side Overlay -->
-        @include('frontend.svg.heroLeftSvg')
+            @include('frontend.svg.heroLeftSvg')
 
-        <!-- Right Side Overlay -->
-        @include('frontend.svg.heroRightSvg')
+            <!-- Right Side Overlay -->
+            @include('frontend.svg.heroRightSvg')
 
 
-        <!-- Content wrapper -->
+            <!-- Content wrapper -->
             <div class="px-4 md:px-0 max-w-4xl mx-auto relative">
                 <div class="w-56 mx-auto wow fadeIn">
                     @include('frontend.svg.logo')
                 </div>
-                <h1
-                        class="title text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">
-                    Our Members </h1>
+                <h1 class="title text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">
+                    Our Members 
+                </h1>
                
             </div>
 
@@ -42,16 +42,12 @@
                             d="M15.1523 242.484C48.0783 228.18 102.639 317.44 102.639 317.44L102.869 316.887C103.156 294.562 101.56 272.144 98.1021 249.918C90.2491 246.259 47.61 226.197 36.2999 216.224C23.6086 205.568 15.4113 172.622 32.0795 166.118C48.7476 159.614 94.7041 232.765 94.7041 232.765L95.1472 230.889C91.9165 211.302 87.9509 191.561 83.8721 173.044C72.2014 164.785 44.7414 144.662 36.8143 133.432C26.6442 119.008 21.9626 103.183 34.5518 99.8099C44.1407 97.2406 66.1984 125.91 76.1753 139.613C72.4517 124.305 68.9436 110.977 66.2025 100.747C54.4053 85.8343 43.7944 69.8595 34.4973 53.0151C26.8943 35.935 19.5496 8.52418 29.5717 2.39482C39.5939 -3.73455 55.5589 8.7856 67.2553 36.4361C76.0892 57.4035 73.5103 86.8408 71.6552 99.9188C74.3611 110.018 77.8051 122.87 81.3468 137.735C82.3333 117.651 85.6015 71.0201 101.169 60.1718C110.103 53.9825 123.99 62.983 125.259 85.8369C126.527 108.691 94.2931 162.521 94.2931 162.521L90.0337 174.626C93.1117 188.702 96.0536 203.447 98.7015 218.27C104.722 198.383 117.205 162.848 135.358 143.294C147.517 129.845 189.751 138.981 176.425 176.078C164.981 207.258 117.692 239.257 103.503 248.19C106.329 266.971 108.002 285.871 108.51 304.762C120.624 279.377 150.689 224.512 180.314 222.829C219.019 220.681 236.674 258.332 208.882 283.561C181.09 308.79 106.065 330.228 106.065 330.228C106.065 330.228 54.1472 319.54 32.9342 308.847C11.7213 298.155 -17.8326 256.805 15.1523 242.484Z"
                             fill="white" fill-opacity="0.12"/>
                 </svg>
-            </div>
-
-            
+            </div>            
         </div>
     </section>
 
     <!-- Members Section -->
     <section class="py-16 space-y-10 lg:space-y-20 relative">
-
-
         <div class="wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             @foreach ($members as $member)
                 <div class="member-card bg-white shadow-lg rounded-lg overflow-hidden">

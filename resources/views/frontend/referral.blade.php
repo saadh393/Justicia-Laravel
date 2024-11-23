@@ -88,6 +88,10 @@
                     placeholder="Your message" rows="6" type="phone" id="Phone"></textarea>
             </div>
 
+            <div class="mb-4">
+                <div class="g-recaptcha" data-sitekey="6Lc2rdAgAAAAAL8JxtH4GmTYRr_H15psNeHh-jxt"></div>
+            </div>
+
             <input  class="btn mx-auto bg-[#933DB5] text-white w-full mt-4  disabled:bg-slate-100  disabled:text-slate-700" type="submit" value="Reach Us" />
 
 
@@ -108,8 +112,18 @@
     document.querySelector('#form').addEventListener('submit', function(e) {
         e.preventDefault();
 
+        const recaptchaResponse = grecaptcha.getResponse();
+        
+        if (!recaptchaResponse) {
+            Swal.fire({
+                title: "Error",
+                text: "Please complete the reCAPTCHA verification",
+                icon: "error"
+            });
+            return;
+        }
+        
         let formData = new FormData(this);
-         
         // Disable the form
         this.querySelectorAll('input, button, textarea, select').forEach(function(element) {
             element.disabled = true;
@@ -131,7 +145,7 @@
                         text: "We recieved your request",
                         icon: "success"
                     });
-                    
+                    grecaptcha.reset(); // Reset reCAPTCHA
                     this.reset(); // Reset form on success
                 } else {
                     Swal.fire({
@@ -145,6 +159,7 @@
                 alert('An error occurred. Please try again.');
             }).finally(() => {
             // Re-enable the form
+            
             this.querySelectorAll('input, button, textarea, select').forEach(function(element) {
                 element.disabled = false;
             });
