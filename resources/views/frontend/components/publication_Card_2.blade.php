@@ -7,7 +7,7 @@
     <div class="h-full w-full flex flex-col justify-center p-5">
         <div class="">
             <h1 class="text-xl line-clamp-3">{{ $publication->Title }}</h1>
-            <span class="mt-4 block text-sm text-gray-600">{{ $publication->Date }}</span>
+            <span class="mt-4 block text-sm text-gray-600">{{ date('d F Y', strtotime($publication->Date)) }}</span>
         </div>
         <div>
             <div class="mt-4 _df_button !bg-white text-base font-medium text-primary-pink hover:underline underline-offset-4 border-none px-0" source="{{ asset('/uploads/publication/files/'. $publication->Link ) }}" >

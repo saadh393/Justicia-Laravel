@@ -30,7 +30,7 @@
                     class="title text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">
                     {{ $blog->Title }}
                 </h1>
-                <p class="text-lg tracking-wide text-white text-center mt-4"> November 19, 2022</p>
+                <p class="text-lg tracking-wide text-white text-center mt-4"> {{ date('d F Y', strtotime($blog->Date)) }}</p>
             </div>
 
         </div>
