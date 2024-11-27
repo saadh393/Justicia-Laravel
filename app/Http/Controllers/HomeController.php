@@ -9,6 +9,7 @@ use App\JoinUsForm;
 use App\Mail\HelloMail;
 use App\Referral;
 use App\Members;
+use App\Pages;
 use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -20,12 +21,29 @@ class HomeController extends Controller
 	{
 		$recentWorks = RecentWorks::where('slide', 1)->orderByDesc('id')->get();
 		$recentPublications = Publications::where('slide', 1)->orderByDesc('id')->take(3)->get();
+		$metaData = Pages::all();
+
+		$transformedData = [];
+
+		foreach ($metaData as $page) {
+			$transformedData[$page['page_name']] = [
+				'id' => $page['id'],
+				'page_name' => $page['page_name'],
+				'title' => $page['title'],
+				'description' => $page['description'],
+				'meta_image' => $page['meta_image'],
+			];
+		}
 		
+		// Optional: Convert to JSON if needed
+		$jsonOutput = json_encode($transformedData);
+
+	
 
 		// Colors for Publication
 		$colorsPublication = ['bg-purple-800', 'bg-pink-500', 'bg-emerald-600', 'bg-orange-500'];
 
-		return view('frontend.home', ['recentWorks' => $recentWorks, 'recentPublications' => $recentPublications, 'colors' => $colorsPublication]);
+		return view('frontend.home', ['metaData' => $transformedData, 'recentWorks' => $recentWorks, 'recentPublications' => $recentPublications, 'colors' => $colorsPublication]);
 	}
 
 	public function joinus_form_submission(Request  $request)
