@@ -12,5 +12,10 @@
       },
       "[php]": {
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-      }
+      },
+      "emmet.triggerExpansionOnTab": true,
+    
+      "[blade]": {
+        "editor.autoClosingBrackets": "always"
+      },
 }

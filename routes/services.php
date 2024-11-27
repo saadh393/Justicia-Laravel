@@ -24,4 +24,9 @@ Route::resource('services/membercontroller','Services\MembercontrollerController
 Route::resource('services/referralcontroller','Services\ReferralcontrollerController');
 // End Routes for referralcontroller 
 
+                    
+// Start Routes for pagescontroller 
+Route::resource('services/pagescontroller','Services\PagescontrollerController');
+// End Routes for pagescontroller 
+
                     ?>
