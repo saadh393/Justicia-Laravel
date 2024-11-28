@@ -16,9 +16,8 @@
                 <div class="w-56 mx-auto">
                     @include('frontend.svg.logo')
                 </div>
-                <h1 class="text-slate-50 text-center text-[45px] leading-[60px] font-[600]">Our Recent Works</h1>
-                <p class="text-lg tracking-wide text-white text-center mt-4">Our telephone advice lines provide vital free and
-                    confidential legal advice to women.</p>
+                <h1 class="text-slate-50 text-center text-[45px] leading-[60px] font-[600]">{{ $metaData['our-recent-works']['title'] }}</h1>
+                <p class="text-lg tracking-wide text-white text-center mt-4">{{ $metaData['our-recent-works']['description'] }}</p>
             </div>
         </div>
     </section>

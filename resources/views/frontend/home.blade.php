@@ -91,14 +91,17 @@
         <!-- Mission -->
         <div class="grid md:grid-cols-2 items-center relative">
             <div class="bg-dots mission-dots wow fadeIn">
-                <img class="h-[375px] object-contain relative z-10" src="./frontend/assets/Mision.svg" alt="Justicia Vision" />
+                <img 
+                    class="h-[375px] object-contain relative z-10" 
+                    src="./uploads/meta/{{ $metaData['our-mision']['meta_image'] }}"
+                    alt="{{ $metaData['our-mision']['title'] }}" />
+                />
             </div>
 
             <div class="space-y-5 col-start-1 lg:row-start-1 text-center lg:text-left wow fadeIn">
-                <h3 class="text-2xl font-bold text-text-black">Our Mision</h3>
+                <h3 class="text-2xl font-bold text-text-black">{{ $metaData['our-mision']['title'] }}</h3>
                 <p class="paragraph">
-                    Our mission is to support initiatives and movements that are based on feminist principles in order to challenge the status quo to bring appropriate change and reform in the legal system by
-                    engaging more intergenerational feminist lawyers and justice sector actors.
+                    {{ $metaData['our-mision']['description'] }}
                 </p>
             </div>
         </div>
@@ -115,10 +118,10 @@
     <div class="wrapper">
         <div class="owl-carousel recentwork-carousel ">
             @foreach ($recentWorks as $work)
-            @include('frontend.components.recentworks', [
-            'post' => $work,
-            'colors' => $colors
-            ])
+                @include('frontend.components.recentworks', [
+                    'post' => $work,
+                    'colors' => $colors
+                ])
             @endforeach
         </div>
         <!-- Next Previous Btn -->
@@ -150,7 +153,7 @@
             @endforeach
         </div>
 
-        <div class="mt-10 mx-auto w-fit  {{count($recentPublications) > 3 ?: "hidden"}}">
+        <div class="mt-10 mx-auto w-fit  {{count($recentPublications) > 3 ?: 'hidden'}}">
             <a href="/publications" class="btn bg-primary-pink text-center px-10 lg:!px-28 mx-auto text-white block">See Our Publications</a>
         </div>
     </div>
@@ -163,17 +166,17 @@
 <link rel="stylesheet" href="./frontend/styles/owl.theme.default.min.css" />
 
 <!-- Flipbook StyleSheet -->
-<link href={{ secure_asset('frontend/dflip/css/dflip.min.css') }} rel="stylesheet" type="text/css">
+<link href="{{ secure_asset('frontend/dflip/css/dflip.min.css') }}" rel="stylesheet" type="text/css">
 
 <!-- Icons Stylesheet -->
-<link href={{ secure_asset('frontend/dflip/css/themify-icons.min.css') }} rel="stylesheet" type="text/css">
+<link href="{{ secure_asset('frontend/dflip/css/themify-icons.min.css') }}" rel="stylesheet" type="text/css">
 
 @endsection
 
 @section('script')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./frontend/scripts/owl.carousel.min.js"></script>
-<script src={{ secure_asset('frontend/dflip/js/dflip.min.js') }} type="text/javascript"></script>
+<script src="{{ secure_asset('frontend/dflip/js/dflip.min.js') }}" type="text/javascript"></script>
 
 
 

@@ -53,6 +53,7 @@
                 </h1>
             </div>
             <nav id="nav-menu-container">
+                
                 @include('layouts.default.navigation')
             </nav>
         </div>

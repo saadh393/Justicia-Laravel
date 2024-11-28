@@ -58,6 +58,7 @@
     <div id="preloader"></div>
     <div id="app" class="page-wrapper">
         @include('layouts.navigation')
+        
         <main class="page-content">
             <a href="javascript:;" class="toggleMenu flying-button"><i class="lni-menu"></i></a>
             <div class="page-inner">

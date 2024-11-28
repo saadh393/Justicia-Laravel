@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Pages;
 use App\RecentWorks;
 
 class BlogController extends Controller
@@ -8,11 +10,28 @@ class BlogController extends Controller
 	public function index()
 	{
 		$recentWorks = RecentWorks::latest()->get();
+		$metaData = Pages::all();
+
+		$transformedData = [];
+
+		foreach ($metaData as $page) {
+			$transformedData[$page['page_name']] = [
+				'id' => $page['id'],
+				'page_name' => $page['page_name'],
+				'title' => $page['title'],
+				'description' => $page['description'],
+				'meta_image' => $page['meta_image'],
+			];
+		}
+		
+		// Optional: Convert to JSON if needed
+		// $jsonOutput = json_encode($transformedData);
+		// print($jsonOutput);
 
 		// Colors for Publication
 		$colorsPublication = ['purple-800','pink-500','emerald-600','orange-500'];
 
-		return view('frontend.blog', ["recentWorks" => $recentWorks, 'colorsPublication' => $colorsPublication]);
+		return view('frontend.blog', ['metaData' => $transformedData, "recentWorks" => $recentWorks, 'colorsPublication' => $colorsPublication]);
 	}
 
 	public function details($id){

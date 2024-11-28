@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section>
+<section>
         <!-- Pink wrapper -->
         <div class="primary-gradient-pink py-20 lg:py-28 relative hero-section grid place-items-center">
             <!-- Left Side Overlay -->
@@ -20,8 +20,11 @@
                     @include('frontend.svg.logo')
                 </div>
                 <h1 class="title text-slate-50 text-center text-[30px] md:text-[35px] lg:text-[45px] leading-[60px] font-[600]">
-                    Our Members 
+                    {{ $metaData['our-members-page']['title'] }}
                 </h1>
+                <p class="text-lg tracking-wide text-white text-center mt-4">
+                    {{ $metaData['our-members-page']['description'] }}
+                </p>
                
             </div>
 

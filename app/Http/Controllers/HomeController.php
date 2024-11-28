@@ -36,8 +36,8 @@ class HomeController extends Controller
 		}
 		
 		// Optional: Convert to JSON if needed
-		$jsonOutput = json_encode($transformedData);
-
+		// $jsonOutput = json_encode($transformedData);
+		// print($jsonOutput);
 	
 
 		// Colors for Publication
@@ -59,15 +59,45 @@ class HomeController extends Controller
 	public function members(Request $request)
 	{
 		$members = new Members();
+		$metaData = Pages::all();
+
+		$transformedData = [];
+
+		foreach ($metaData as $page) {
+			$transformedData[$page['page_name']] = [
+				'id' => $page['id'],
+				'page_name' => $page['page_name'],
+				'title' => $page['title'],
+				'description' => $page['description'],
+				'meta_image' => $page['meta_image'],
+			];
+		}
+	
 
 		return view('frontend.members', [
+			'metaData' => $transformedData,
 			'members' => $members->get()
 		]);
 	}
 
 	public function referral(Request $request)
 	{
-		return view('frontend.referral');
+		$recentPublications = Publications::where('slide', 1)->orderByDesc('id')->take(3)->get();
+		$metaData = Pages::all();
+
+		$transformedData = [];
+
+		foreach ($metaData as $page) {
+			$transformedData[$page['page_name']] = [
+				'id' => $page['id'],
+				'page_name' => $page['page_name'],
+				'title' => $page['title'],
+				'description' => $page['description'],
+				'meta_image' => $page['meta_image'],
+			];
+		}
+
+		return view('frontend.referral' , ['metaData' => $transformedData]);
 	}
 
 	public function handle_referral_submission(Request $request)
