@@ -95,7 +95,6 @@
                     class="h-[375px] object-contain relative z-10" 
                     src="./uploads/meta/{{ $metaData['our-mision']['meta_image'] }}"
                     alt="{{ $metaData['our-mision']['title'] }}" />
-                />
             </div>
 
             <div class="space-y-5 col-start-1 lg:row-start-1 text-center lg:text-left wow fadeIn">
