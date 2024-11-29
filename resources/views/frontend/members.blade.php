@@ -62,30 +62,18 @@
             <div class="member-content p-6 ">
                 <h3 class="text-xl font-bold text-text-black mb-0">{{ $member->name }}</h3>
                 <p class="my-1 text-sm text-gray-600">{{ $member->designation }}</p>
-                <p class="my-3 text-sm">{{ $member->short_description }}</p>
-
                 @if ($member->expertise && trim($member->expertise) !== '')
-                <h3 class="font-medium">Expertise</h3>
-                <div class="my-1 text-sm flex gap-4">
+                <div class="my-1 text-sm flex gap-3">
                     @foreach (explode(",", $member->expertise) as $expertise)
-                    @php
-                    $colors = [
-                        'indigo' => ['bg' => 'bg-indigo-400/20', 'text' => 'text-indigo-800'],
-                        'pink' => ['bg' => 'bg-pink-400/20', 'text' => 'text-pink-800'],
-                        'purple' => ['bg' => 'bg-purple-400/20', 'text' => 'text-purple-800'],
-                        'red' => ['bg' => 'bg-red-400/20', 'text' => 'text-red-800'],
-                        'teal' => ['bg' => 'bg-teal-400/20', 'text' => 'text-teal-800'],
-                        'cyan' => ['bg' => 'bg-cyan-400/20', 'text' => 'text-cyan-800'],
-                        'rose' => ['bg' => 'bg-rose-400/20', 'text' => 'text-rose-800']
-                    ];
-                    $randomColor = $colors[array_rand($colors)];
-                    @endphp
-                    <p class="px-2 py-1 text-center {{ $randomColor['bg'] }} {{ $randomColor['text'] }} rounded-md">
+                    <p class="px-2 py-1 text-cente rounded-md" style="background-color:#d800e8;color:white">
                         {{ trim($expertise) }}
                     </p>
                     @endforeach
                 </div>
                 @endif
+                <p class="my-3 text-sm">{{ $member->short_description }}</p>
+
+                
             </div>
         </div>
         @endforeach
