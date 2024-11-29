@@ -83,7 +83,7 @@ class HomeController extends Controller
 	public function referral(Request $request)
 	{
 		$recentPublications = Publications::where('slide', 1)->orderByDesc('id')->take(3)->get();
-		$metaData = Pages::all();
+		
 
 		$transformedData = [];
 
@@ -102,7 +102,8 @@ class HomeController extends Controller
 
 	public function handle_referral_submission(Request $request)
 	{
-		// return $request->all();
+		$metaData = Pages::all();
+
 		// Validate the form data
 		$validated = $request->validate([
 			'name' => 'required|string|max:255',
@@ -125,6 +126,15 @@ class HomeController extends Controller
 			
 
 			Mail::to("saadh3939@gmail.com")->send(new HelloMail([
+				'name' => $referral->name,
+				'email' => $referral->email,
+				'contact' => $referral->contact,
+				'message' => $referral->message
+			]));
+
+			// Filter $metaData which have `page_name` is `email` 
+			$emailPage = $metaData->where('page_name', 'email')->first();			
+			Mail::to($emailPage)->send(new HelloMail([
 				'name' => $referral->name,
 				'email' => $referral->email,
 				'contact' => $referral->contact,
