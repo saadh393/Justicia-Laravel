@@ -73,6 +73,7 @@ class HomeController extends Controller
 			];
 		}
 	
+		// ddd($members->get());
 
 		return view('frontend.members', [
 			'metaData' => $transformedData,

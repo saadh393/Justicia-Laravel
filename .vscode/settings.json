@@ -16,7 +16,8 @@
       "emmet.triggerExpansionOnTab": true,
     
       "[blade]": {
-        "editor.autoClosingBrackets": "always"
+        "editor.autoClosingBrackets": "always",
+        "editor.defaultFormatter": "onecentlin.laravel-blade"
       },
       "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"

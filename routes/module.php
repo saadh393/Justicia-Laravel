@@ -29,4 +29,9 @@ Route::resource('referralcontroller','ReferralcontrollerController');
 Route::resource('pagescontroller','PagescontrollerController');
 // End Routes for pagescontroller 
 
+                    
+// Start Routes for workcategoriescontroller 
+Route::resource('workcategoriescontroller','WorkcategoriescontrollerController');
+// End Routes for workcategoriescontroller 
+
                     ?>
