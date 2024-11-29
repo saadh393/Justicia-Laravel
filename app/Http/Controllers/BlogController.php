@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Pages;
 use App\RecentWorks;
+use App\OurWorkCategories;
 
 class BlogController extends Controller
 {
@@ -11,6 +12,7 @@ class BlogController extends Controller
 	{
 		$recentWorks = RecentWorks::latest()->get();
 		$metaData = Pages::all();
+		$categories = OurWorkCategories::all();
 
 		$transformedData = [];
 
@@ -31,7 +33,7 @@ class BlogController extends Controller
 		// Colors for Publication
 		$colorsPublication = ['purple-800','pink-500','emerald-600','orange-500'];
 
-		return view('frontend.blog', ['metaData' => $transformedData, "recentWorks" => $recentWorks, 'colorsPublication' => $colorsPublication]);
+		return view('frontend.blog', ['categories' => $categories, 'metaData' => $transformedData, "recentWorks" => $recentWorks, 'colorsPublication' => $colorsPublication]);
 	}
 
 	public function details($id){
