@@ -27,6 +27,12 @@
 			<tbody>	
 		
 					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Id', (isset($fields['id']['language'])? $fields['id']['language'] : array())) }}</td>
+						<td>{{ $row->id}} </td>
+						
+					</tr>
+				
+					<tr>
 						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Name', (isset($fields['name']['language'])? $fields['name']['language'] : array())) }}</td>
 						<td>{{ $row->name}} </td>
 						
@@ -41,6 +47,12 @@
 					<tr>
 						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Short Description', (isset($fields['short_description']['language'])? $fields['short_description']['language'] : array())) }}</td>
 						<td>{{ $row->short_description}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Expertise', (isset($fields['expertise']['language'])? $fields['expertise']['language'] : array())) }}</td>
+						<td>{{ $row->expertise}} </td>
 						
 					</tr>
 				
