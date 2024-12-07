@@ -63,7 +63,7 @@
                 <h3 class="text-xl font-bold text-text-black mb-0">{{ $member->name }}</h3>
                 <p class="my-1 text-sm text-gray-600">{{ $member->designation }}</p>
                 @if ($member->expertise && trim($member->expertise) !== '')
-                <div class="my-1 text-sm flex gap-3">
+                <div class="my-1 text-sm flex gap-3 flex-wrap">
                     @foreach (explode(",", $member->expertise) as $expertise)
                     <p class="px-2 py-1 text-cente rounded-md" style="background-color:#d800e8;color:white">
                         {{ trim($expertise) }}
