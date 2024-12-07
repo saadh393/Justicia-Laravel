@@ -84,6 +84,7 @@ class HomeController extends Controller
 	public function referral(Request $request)
 	{
 		$recentPublications = Publications::where('slide', 1)->orderByDesc('id')->take(3)->get();
+		$metaData = Pages::all();
 		
 
 		$transformedData = [];
